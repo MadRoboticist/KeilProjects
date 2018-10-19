@@ -1,0 +1,53 @@
+\hypertarget{system___m_k_l25_z4_8c}{}\section{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M1\+\_\+\+Keil/system\+\_\+\+M\+K\+L25\+Z4.c File Reference}
+\label{system___m_k_l25_z4_8c}\index{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M1\+\_\+\+Keil/system\+\_\+\+M\+K\+L25\+Z4.\+c@{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M1\+\_\+\+Keil/system\+\_\+\+M\+K\+L25\+Z4.\+c}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}M\+K\+L25\+Z4.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{system___m_k_l25_z4_8c_a93f514700ccf00d08dbdcff7f1224eb2}{System\+Init} (void)
+\begin{DoxyCompactList}\small\item\em Setup the microcontroller system. \end{DoxyCompactList}\item 
+void \hyperlink{system___m_k_l25_z4_8c_ae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update} (void)
+\begin{DoxyCompactList}\small\item\em Updates the System\+Core\+Clock variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{system___m_k_l25_z4_8c_aa3cd3e43291e81e795d642b79b6088e6}{System\+Core\+Clock} = \hyperlink{system___m_k_l25_z4_8h_a87431195115b66c4874dc05a6eae554f}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}
+\begin{DoxyCompactList}\small\item\em System clock frequency (core clock) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{system___m_k_l25_z4_8c_ae0c36a9591fe6e9c45ecb21a794f0f0f}\label{system___m_k_l25_z4_8c_ae0c36a9591fe6e9c45ecb21a794f0f0f}} 
+\index{system\+\_\+\+M\+K\+L25\+Z4.\+c@{system\+\_\+\+M\+K\+L25\+Z4.\+c}!System\+Core\+Clock\+Update@{System\+Core\+Clock\+Update}}
+\index{System\+Core\+Clock\+Update@{System\+Core\+Clock\+Update}!system\+\_\+\+M\+K\+L25\+Z4.\+c@{system\+\_\+\+M\+K\+L25\+Z4.\+c}}
+\subsubsection{\texorpdfstring{System\+Core\+Clock\+Update()}{SystemCoreClockUpdate()}}
+{\footnotesize\ttfamily void System\+Core\+Clock\+Update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Updates the System\+Core\+Clock variable. 
+
+It must be called whenever the core clock is changed during program execution. \hyperlink{system___m_k_l25_z4_8h_ae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update()} evaluates the clock register settings and calculates the current core clock. \mbox{\Hypertarget{system___m_k_l25_z4_8c_a93f514700ccf00d08dbdcff7f1224eb2}\label{system___m_k_l25_z4_8c_a93f514700ccf00d08dbdcff7f1224eb2}} 
+\index{system\+\_\+\+M\+K\+L25\+Z4.\+c@{system\+\_\+\+M\+K\+L25\+Z4.\+c}!System\+Init@{System\+Init}}
+\index{System\+Init@{System\+Init}!system\+\_\+\+M\+K\+L25\+Z4.\+c@{system\+\_\+\+M\+K\+L25\+Z4.\+c}}
+\subsubsection{\texorpdfstring{System\+Init()}{SystemInit()}}
+{\footnotesize\ttfamily void System\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Setup the microcontroller system. 
+
+Typically this function configures the oscillator (P\+LL) that is part of the microcontroller device. For systems with variable clock speed it also updates the variable System\+Core\+Clock. System\+Init is called from startup\+\_\+device file. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{system___m_k_l25_z4_8c_aa3cd3e43291e81e795d642b79b6088e6}\label{system___m_k_l25_z4_8c_aa3cd3e43291e81e795d642b79b6088e6}} 
+\index{system\+\_\+\+M\+K\+L25\+Z4.\+c@{system\+\_\+\+M\+K\+L25\+Z4.\+c}!System\+Core\+Clock@{System\+Core\+Clock}}
+\index{System\+Core\+Clock@{System\+Core\+Clock}!system\+\_\+\+M\+K\+L25\+Z4.\+c@{system\+\_\+\+M\+K\+L25\+Z4.\+c}}
+\subsubsection{\texorpdfstring{System\+Core\+Clock}{SystemCoreClock}}
+{\footnotesize\ttfamily uint32\+\_\+t System\+Core\+Clock = \hyperlink{system___m_k_l25_z4_8h_a87431195115b66c4874dc05a6eae554f}{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+C\+L\+O\+CK}}
+
+
+
+System clock frequency (core clock) 
+
+The system clock frequency supplied to the Sys\+Tick timer and the processor core clock. This variable can be used by the user application to setup the Sys\+Tick timer or configure other parameters. It may also be used by debugger to query the frequency of the debug timer or configure the trace clock speed System\+Core\+Clock is initialized with a correct predefined value. 

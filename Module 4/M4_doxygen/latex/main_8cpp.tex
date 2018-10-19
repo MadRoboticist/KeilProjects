@@ -1,0 +1,400 @@
+\hypertarget{main_8cpp}{}\section{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M4\+\_\+\+Keil/main.cpp File Reference}
+\label{main_8cpp}\index{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M4\+\_\+\+Keil/main.\+cpp@{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M4\+\_\+\+Keil/main.\+cpp}}
+{\ttfamily \#include \char`\"{}shared.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Test\+Data.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8cpp_a34b04bd23b07b485921a728ad0805ac4}{M\+A\+IN}
+\item 
+\#define \hyperlink{main_8cpp_a5cbcaa568e20fcd4cc9325927d370860}{A\+D\+C\+\_\+0}~(0\+U)
+\item 
+\#define \hyperlink{main_8cpp_a3a68e0275a8f51f44fa1ab564d23b0f0}{C\+H\+A\+N\+N\+E\+L\+\_\+0}~(0\+U)
+\item 
+\#define \hyperlink{main_8cpp_a0163025498d90e61500d3aa30b422efa}{C\+H\+A\+N\+N\+E\+L\+\_\+1}~(1\+U)
+\item 
+\#define \hyperlink{main_8cpp_aed0f3200ae4286984ee855977dfe55c7}{C\+H\+A\+N\+N\+E\+L\+\_\+2}~(2\+U)
+\item 
+\#define \hyperlink{main_8cpp_af2e697ac60e05813d45ea2c9c9e79c25}{L\+E\+D\+\_\+\+ON}~(0\+U)
+\item 
+\#define \hyperlink{main_8cpp_a80700bb63bd56ebabbb4728aa433fd29}{L\+E\+D\+\_\+\+O\+FF}~(1\+U)
+\item 
+\#define \hyperlink{main_8cpp_ad1cb1210a1062abeaffc2bfb142a0fef}{A\+D\+C\+R\+\_\+\+V\+DD}~(65535\+U)    /$\ast$! Maximum value when use 16b resolution $\ast$/
+\item 
+\#define \hyperlink{main_8cpp_add266b4695ff28798e98c58017a068da}{V\+\_\+\+BG}~(1000\+U)     /$\ast$! B\+A\+N\+D\+G\+A\+P voltage in m\+V (trim to 1.\+0\+V) $\ast$/
+\item 
+\#define \hyperlink{main_8cpp_a0411b168217e237bf124c69d80cb34da}{V\+\_\+\+T\+E\+M\+P25}~(716\+U)      /$\ast$! Typical V\+T\+E\+M\+P25 in m\+V $\ast$/
+\item 
+\#define \hyperlink{main_8cpp_a52037c938e3c1b126c6277da5ca689d0}{M}~(1620\+U)     /$\ast$! Typical slope\+: (m\+V x 1000)/o\+C $\ast$/
+\item 
+\#define \hyperlink{main_8cpp_a881d8ee2db088be628ec58d76047b950}{S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+T\+E\+MP}~(25)
+\item 
+\#define \hyperlink{main_8cpp_a0d707b99916344e29b4583a617f77af4}{d\+\_\+width}~0.\+5
+\item 
+\#define \hyperlink{main_8cpp_a1230649f2e178a83485c5b5465ff8260}{P\+ID}~2.\+900
+\item 
+\#define \hyperlink{main_8cpp_aac11632f35bebda1cdba0b12e6a084a4}{P\+I\+Dm}~0.\+07366
+\item 
+\#define \hyperlink{main_8cpp_a88f0d7c812604f688eaf9e3224cfa930}{sample\+\_\+period}~0.\+0001
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a2afeb0903a6c067c9e51a8e6372b15e2}{A\+D\+C0\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize A\+D\+C0. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_ac9c6662301c0982c51c217d9c5e64d0f}{A\+D\+C1\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize A\+D\+C1. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a922a7b029544930b843f82e24cdf60b0}{A\+D\+C2\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize A\+D\+C2. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a7db7f271b28e18cedd6171bb736d8a37}{S\+P\+I0\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Initialize S\+PI. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a17c693c84acd451364d96b0918d3276d}{S\+P\+I0\+\_\+write} (unsigned char $\ast$data, int size)
+\begin{DoxyCompactList}\small\item\em send characters through S\+PI \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a097ebb722f82a2d46ff9799d8aa61754}{read\+\_\+internal\+\_\+temp} ()
+\begin{DoxyCompactList}\small\item\em Read raw analog data (frequency and temperature) from the flowmeter. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_afd9dc386dd3c78884d4d81e892662119}{read\+F\+R\+EQ} ()
+\begin{DoxyCompactList}\small\item\em convert raw analog data from the flowmeter to frequency. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a1865bf41952046b890cfc968bb589ef7}{calculate\+\_\+flow} ()
+\begin{DoxyCompactList}\small\item\em calculate a flow based on temperature and frequency \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a1be749eda2081f30b3b8b933228e0ff1}{read\+\_\+vrefl} ()
+\begin{DoxyCompactList}\small\item\em reads analog data from channel 30 \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a63dd01341d3566ea779f7597d942a846}{read\+A\+DC} ()
+\begin{DoxyCompactList}\small\item\em T\+O\+DO\+: empty function for A\+DC reads. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_aa2ce22a8a8a31dee09e1ecde709e8500}{L\+C\+D\+\_\+\+Display} ()
+\begin{DoxyCompactList}\small\item\em send flow data to L\+CD display \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\begin{DoxyCompactList}\small\item\em main function, setup and loop \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{main_8cpp_a0ce4638494dbc448b0149d61a847302f}{c\+\_\+spi}
+\item 
+volatile \hyperlink{shared_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} \hyperlink{main_8cpp_aeca2f6d177dc8e5ee54061e0acb82822}{Sw\+Timer\+Isr\+Counter}
+\item 
+Ticker \hyperlink{main_8cpp_a25d50c6987a26c14c9f4348f82f20640}{tick}
+\begin{DoxyCompactList}\small\item\em I\+SR counter. \end{DoxyCompactList}\item 
+\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} \hyperlink{main_8cpp_ab632fb0b4d5156ea4df0b1e15410e913}{frequency} = 0.\+0f
+\begin{DoxyCompactList}\small\item\em Creates a timer interrupt using mbed methods. \end{DoxyCompactList}\item 
+\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} \hyperlink{main_8cpp_a6460ae4ad1bf348486378ed1456f1cfa}{temperature} = 2300
+\item 
+\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} \hyperlink{main_8cpp_af4ecf40cee9c7e0df5d1d79cee070829}{St\+\_\+int} = 0
+\item 
+\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} \hyperlink{main_8cpp_a21730a8b4296b64d9c4ebf30db39c115}{Re} = 1500000
+\item 
+\hyperlink{shared_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} \hyperlink{main_8cpp_a0f1641ae0330127189a1e42165d5f0a3}{iters} = 0
+\item 
+\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} \hyperlink{main_8cpp_a31b54a58ce21bf866b42b7e53121cdb3}{Flow} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+
+
+
+
+ -- E\+C\+EN 5803 Mastering Embedded System Architecture -- -- Project 1 Module 4 -- -- Microcontroller Firmware -- -- \hyperlink{main_8cpp}{main.\+cpp} -- \subsubsection*{-- -- }
+
+-- \subsubsection*{-- Designed for\+: University of Colorado at Boulder }
+
+-- -- Designed by\+: Tim Scherr \subsubsection*{-- Revised by\+: David James and Ismail Yesildirek }
+
+-- Version\+: 2.\+0.\+2 -- Date of current revision\+: 2018-\/10-\/04 -- Target Microcontroller\+: Freescale M\+K\+L25\+Z\+V\+M\+T4 -- Tools used\+: A\+RM mbed compiler -- A\+RM mbed S\+DK \subsubsection*{-- Freescale F\+R\+D\+M-\/\+K\+L25Z Freedom Board }
+
+-- -- Functional Description\+: Main code file generated by mbed, and then \subsubsection*{-- modified to implement a super loop bare metal OS. }
+
+\subsubsection*{-- Copyright (c) 2015, 2016 Tim Scherr All rights reserved. }
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{main_8cpp_a5cbcaa568e20fcd4cc9325927d370860}\label{main_8cpp_a5cbcaa568e20fcd4cc9325927d370860}} 
+\index{main.\+cpp@{main.\+cpp}!A\+D\+C\+\_\+0@{A\+D\+C\+\_\+0}}
+\index{A\+D\+C\+\_\+0@{A\+D\+C\+\_\+0}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{A\+D\+C\+\_\+0}{ADC\_0}}
+{\footnotesize\ttfamily \#define A\+D\+C\+\_\+0~(0\+U)}
+
+\mbox{\Hypertarget{main_8cpp_ad1cb1210a1062abeaffc2bfb142a0fef}\label{main_8cpp_ad1cb1210a1062abeaffc2bfb142a0fef}} 
+\index{main.\+cpp@{main.\+cpp}!A\+D\+C\+R\+\_\+\+V\+DD@{A\+D\+C\+R\+\_\+\+V\+DD}}
+\index{A\+D\+C\+R\+\_\+\+V\+DD@{A\+D\+C\+R\+\_\+\+V\+DD}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{A\+D\+C\+R\+\_\+\+V\+DD}{ADCR\_VDD}}
+{\footnotesize\ttfamily \#define A\+D\+C\+R\+\_\+\+V\+DD~(65535\+U)    /$\ast$! Maximum value when use 16b resolution $\ast$/}
+
+\mbox{\Hypertarget{main_8cpp_a3a68e0275a8f51f44fa1ab564d23b0f0}\label{main_8cpp_a3a68e0275a8f51f44fa1ab564d23b0f0}} 
+\index{main.\+cpp@{main.\+cpp}!C\+H\+A\+N\+N\+E\+L\+\_\+0@{C\+H\+A\+N\+N\+E\+L\+\_\+0}}
+\index{C\+H\+A\+N\+N\+E\+L\+\_\+0@{C\+H\+A\+N\+N\+E\+L\+\_\+0}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{C\+H\+A\+N\+N\+E\+L\+\_\+0}{CHANNEL\_0}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+N\+E\+L\+\_\+0~(0\+U)}
+
+\mbox{\Hypertarget{main_8cpp_a0163025498d90e61500d3aa30b422efa}\label{main_8cpp_a0163025498d90e61500d3aa30b422efa}} 
+\index{main.\+cpp@{main.\+cpp}!C\+H\+A\+N\+N\+E\+L\+\_\+1@{C\+H\+A\+N\+N\+E\+L\+\_\+1}}
+\index{C\+H\+A\+N\+N\+E\+L\+\_\+1@{C\+H\+A\+N\+N\+E\+L\+\_\+1}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{C\+H\+A\+N\+N\+E\+L\+\_\+1}{CHANNEL\_1}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+N\+E\+L\+\_\+1~(1\+U)}
+
+\mbox{\Hypertarget{main_8cpp_aed0f3200ae4286984ee855977dfe55c7}\label{main_8cpp_aed0f3200ae4286984ee855977dfe55c7}} 
+\index{main.\+cpp@{main.\+cpp}!C\+H\+A\+N\+N\+E\+L\+\_\+2@{C\+H\+A\+N\+N\+E\+L\+\_\+2}}
+\index{C\+H\+A\+N\+N\+E\+L\+\_\+2@{C\+H\+A\+N\+N\+E\+L\+\_\+2}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{C\+H\+A\+N\+N\+E\+L\+\_\+2}{CHANNEL\_2}}
+{\footnotesize\ttfamily \#define C\+H\+A\+N\+N\+E\+L\+\_\+2~(2\+U)}
+
+\mbox{\Hypertarget{main_8cpp_a0d707b99916344e29b4583a617f77af4}\label{main_8cpp_a0d707b99916344e29b4583a617f77af4}} 
+\index{main.\+cpp@{main.\+cpp}!d\+\_\+width@{d\+\_\+width}}
+\index{d\+\_\+width@{d\+\_\+width}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{d\+\_\+width}{d\_width}}
+{\footnotesize\ttfamily \#define d\+\_\+width~0.\+5}
+
+\mbox{\Hypertarget{main_8cpp_a80700bb63bd56ebabbb4728aa433fd29}\label{main_8cpp_a80700bb63bd56ebabbb4728aa433fd29}} 
+\index{main.\+cpp@{main.\+cpp}!L\+E\+D\+\_\+\+O\+FF@{L\+E\+D\+\_\+\+O\+FF}}
+\index{L\+E\+D\+\_\+\+O\+FF@{L\+E\+D\+\_\+\+O\+FF}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+O\+FF}{LED\_OFF}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+O\+FF~(1\+U)}
+
+\mbox{\Hypertarget{main_8cpp_af2e697ac60e05813d45ea2c9c9e79c25}\label{main_8cpp_af2e697ac60e05813d45ea2c9c9e79c25}} 
+\index{main.\+cpp@{main.\+cpp}!L\+E\+D\+\_\+\+ON@{L\+E\+D\+\_\+\+ON}}
+\index{L\+E\+D\+\_\+\+ON@{L\+E\+D\+\_\+\+ON}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+ON}{LED\_ON}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+ON~(0\+U)}
+
+\mbox{\Hypertarget{main_8cpp_a52037c938e3c1b126c6277da5ca689d0}\label{main_8cpp_a52037c938e3c1b126c6277da5ca689d0}} 
+\index{main.\+cpp@{main.\+cpp}!M@{M}}
+\index{M@{M}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily \#define M~(1620\+U)     /$\ast$! Typical slope\+: (m\+V x 1000)/o\+C $\ast$/}
+
+\mbox{\Hypertarget{main_8cpp_a34b04bd23b07b485921a728ad0805ac4}\label{main_8cpp_a34b04bd23b07b485921a728ad0805ac4}} 
+\index{main.\+cpp@{main.\+cpp}!M\+A\+IN@{M\+A\+IN}}
+\index{M\+A\+IN@{M\+A\+IN}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{M\+A\+IN}{MAIN}}
+{\footnotesize\ttfamily \#define M\+A\+IN}
+
+\mbox{\Hypertarget{main_8cpp_a1230649f2e178a83485c5b5465ff8260}\label{main_8cpp_a1230649f2e178a83485c5b5465ff8260}} 
+\index{main.\+cpp@{main.\+cpp}!P\+ID@{P\+ID}}
+\index{P\+ID@{P\+ID}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{P\+ID}{PID}}
+{\footnotesize\ttfamily \#define P\+ID~2.\+900}
+
+\mbox{\Hypertarget{main_8cpp_aac11632f35bebda1cdba0b12e6a084a4}\label{main_8cpp_aac11632f35bebda1cdba0b12e6a084a4}} 
+\index{main.\+cpp@{main.\+cpp}!P\+I\+Dm@{P\+I\+Dm}}
+\index{P\+I\+Dm@{P\+I\+Dm}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{P\+I\+Dm}{PIDm}}
+{\footnotesize\ttfamily \#define P\+I\+Dm~0.\+07366}
+
+\mbox{\Hypertarget{main_8cpp_a88f0d7c812604f688eaf9e3224cfa930}\label{main_8cpp_a88f0d7c812604f688eaf9e3224cfa930}} 
+\index{main.\+cpp@{main.\+cpp}!sample\+\_\+period@{sample\+\_\+period}}
+\index{sample\+\_\+period@{sample\+\_\+period}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{sample\+\_\+period}{sample\_period}}
+{\footnotesize\ttfamily \#define sample\+\_\+period~0.\+0001}
+
+\mbox{\Hypertarget{main_8cpp_a881d8ee2db088be628ec58d76047b950}\label{main_8cpp_a881d8ee2db088be628ec58d76047b950}} 
+\index{main.\+cpp@{main.\+cpp}!S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+T\+E\+MP@{S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+T\+E\+MP}}
+\index{S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+T\+E\+MP@{S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+T\+E\+MP}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+T\+E\+MP}{STANDARD\_TEMP}}
+{\footnotesize\ttfamily \#define S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+T\+E\+MP~(25)}
+
+\mbox{\Hypertarget{main_8cpp_add266b4695ff28798e98c58017a068da}\label{main_8cpp_add266b4695ff28798e98c58017a068da}} 
+\index{main.\+cpp@{main.\+cpp}!V\+\_\+\+BG@{V\+\_\+\+BG}}
+\index{V\+\_\+\+BG@{V\+\_\+\+BG}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{V\+\_\+\+BG}{V\_BG}}
+{\footnotesize\ttfamily \#define V\+\_\+\+BG~(1000\+U)     /$\ast$! B\+A\+N\+D\+G\+A\+P voltage in m\+V (trim to 1.\+0\+V) $\ast$/}
+
+\mbox{\Hypertarget{main_8cpp_a0411b168217e237bf124c69d80cb34da}\label{main_8cpp_a0411b168217e237bf124c69d80cb34da}} 
+\index{main.\+cpp@{main.\+cpp}!V\+\_\+\+T\+E\+M\+P25@{V\+\_\+\+T\+E\+M\+P25}}
+\index{V\+\_\+\+T\+E\+M\+P25@{V\+\_\+\+T\+E\+M\+P25}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{V\+\_\+\+T\+E\+M\+P25}{V\_TEMP25}}
+{\footnotesize\ttfamily \#define V\+\_\+\+T\+E\+M\+P25~(716\+U)      /$\ast$! Typical V\+T\+E\+M\+P25 in m\+V $\ast$/}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a2afeb0903a6c067c9e51a8e6372b15e2}\label{main_8cpp_a2afeb0903a6c067c9e51a8e6372b15e2}} 
+\index{main.\+cpp@{main.\+cpp}!A\+D\+C0\+\_\+init@{A\+D\+C0\+\_\+init}}
+\index{A\+D\+C0\+\_\+init@{A\+D\+C0\+\_\+init}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{A\+D\+C0\+\_\+init()}{ADC0\_init()}}
+{\footnotesize\ttfamily void A\+D\+C0\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize A\+D\+C0. 
+
+\mbox{\Hypertarget{main_8cpp_ac9c6662301c0982c51c217d9c5e64d0f}\label{main_8cpp_ac9c6662301c0982c51c217d9c5e64d0f}} 
+\index{main.\+cpp@{main.\+cpp}!A\+D\+C1\+\_\+init@{A\+D\+C1\+\_\+init}}
+\index{A\+D\+C1\+\_\+init@{A\+D\+C1\+\_\+init}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{A\+D\+C1\+\_\+init()}{ADC1\_init()}}
+{\footnotesize\ttfamily void A\+D\+C1\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize A\+D\+C1. 
+
+\mbox{\Hypertarget{main_8cpp_a922a7b029544930b843f82e24cdf60b0}\label{main_8cpp_a922a7b029544930b843f82e24cdf60b0}} 
+\index{main.\+cpp@{main.\+cpp}!A\+D\+C2\+\_\+init@{A\+D\+C2\+\_\+init}}
+\index{A\+D\+C2\+\_\+init@{A\+D\+C2\+\_\+init}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{A\+D\+C2\+\_\+init()}{ADC2\_init()}}
+{\footnotesize\ttfamily void A\+D\+C2\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize A\+D\+C2. 
+
+\mbox{\Hypertarget{main_8cpp_a1865bf41952046b890cfc968bb589ef7}\label{main_8cpp_a1865bf41952046b890cfc968bb589ef7}} 
+\index{main.\+cpp@{main.\+cpp}!calculate\+\_\+flow@{calculate\+\_\+flow}}
+\index{calculate\+\_\+flow@{calculate\+\_\+flow}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{calculate\+\_\+flow()}{calculate\_flow()}}
+{\footnotesize\ttfamily void calculate\+\_\+flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+calculate a flow based on temperature and frequency 
+
+\mbox{\Hypertarget{main_8cpp_aa2ce22a8a8a31dee09e1ecde709e8500}\label{main_8cpp_aa2ce22a8a8a31dee09e1ecde709e8500}} 
+\index{main.\+cpp@{main.\+cpp}!L\+C\+D\+\_\+\+Display@{L\+C\+D\+\_\+\+Display}}
+\index{L\+C\+D\+\_\+\+Display@{L\+C\+D\+\_\+\+Display}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{L\+C\+D\+\_\+\+Display()}{LCD\_Display()}}
+{\footnotesize\ttfamily void L\+C\+D\+\_\+\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+send flow data to L\+CD display 
+
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+main function, setup and loop 
+
+pointer to the receive in data
+
+pointer to the receive out data$\ast$/
+
+pointer to the transmit in data$\ast$/
+
+pointer to the transmit out $\ast$/ \mbox{\Hypertarget{main_8cpp_a097ebb722f82a2d46ff9799d8aa61754}\label{main_8cpp_a097ebb722f82a2d46ff9799d8aa61754}} 
+\index{main.\+cpp@{main.\+cpp}!read\+\_\+internal\+\_\+temp@{read\+\_\+internal\+\_\+temp}}
+\index{read\+\_\+internal\+\_\+temp@{read\+\_\+internal\+\_\+temp}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{read\+\_\+internal\+\_\+temp()}{read\_internal\_temp()}}
+{\footnotesize\ttfamily void read\+\_\+internal\+\_\+temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Read raw analog data (frequency and temperature) from the flowmeter. 
+
+\mbox{\Hypertarget{main_8cpp_a1be749eda2081f30b3b8b933228e0ff1}\label{main_8cpp_a1be749eda2081f30b3b8b933228e0ff1}} 
+\index{main.\+cpp@{main.\+cpp}!read\+\_\+vrefl@{read\+\_\+vrefl}}
+\index{read\+\_\+vrefl@{read\+\_\+vrefl}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{read\+\_\+vrefl()}{read\_vrefl()}}
+{\footnotesize\ttfamily void read\+\_\+vrefl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reads analog data from channel 30 
+
+\mbox{\Hypertarget{main_8cpp_a63dd01341d3566ea779f7597d942a846}\label{main_8cpp_a63dd01341d3566ea779f7597d942a846}} 
+\index{main.\+cpp@{main.\+cpp}!read\+A\+DC@{read\+A\+DC}}
+\index{read\+A\+DC@{read\+A\+DC}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{read\+A\+D\+C()}{readADC()}}
+{\footnotesize\ttfamily void read\+A\+DC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+T\+O\+DO\+: empty function for A\+DC reads. 
+
+\mbox{\Hypertarget{main_8cpp_afd9dc386dd3c78884d4d81e892662119}\label{main_8cpp_afd9dc386dd3c78884d4d81e892662119}} 
+\index{main.\+cpp@{main.\+cpp}!read\+F\+R\+EQ@{read\+F\+R\+EQ}}
+\index{read\+F\+R\+EQ@{read\+F\+R\+EQ}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{read\+F\+R\+E\+Q()}{readFREQ()}}
+{\footnotesize\ttfamily void read\+F\+R\+EQ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+convert raw analog data from the flowmeter to frequency. 
+
+\mbox{\Hypertarget{main_8cpp_a7db7f271b28e18cedd6171bb736d8a37}\label{main_8cpp_a7db7f271b28e18cedd6171bb736d8a37}} 
+\index{main.\+cpp@{main.\+cpp}!S\+P\+I0\+\_\+init@{S\+P\+I0\+\_\+init}}
+\index{S\+P\+I0\+\_\+init@{S\+P\+I0\+\_\+init}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{S\+P\+I0\+\_\+init()}{SPI0\_init()}}
+{\footnotesize\ttfamily void S\+P\+I0\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize S\+PI. 
+
+\mbox{\Hypertarget{main_8cpp_a17c693c84acd451364d96b0918d3276d}\label{main_8cpp_a17c693c84acd451364d96b0918d3276d}} 
+\index{main.\+cpp@{main.\+cpp}!S\+P\+I0\+\_\+write@{S\+P\+I0\+\_\+write}}
+\index{S\+P\+I0\+\_\+write@{S\+P\+I0\+\_\+write}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{S\+P\+I0\+\_\+write()}{SPI0\_write()}}
+{\footnotesize\ttfamily void S\+P\+I0\+\_\+write (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{data,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+send characters through S\+PI 
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a0ce4638494dbc448b0149d61a847302f}\label{main_8cpp_a0ce4638494dbc448b0149d61a847302f}} 
+\index{main.\+cpp@{main.\+cpp}!c\+\_\+spi@{c\+\_\+spi}}
+\index{c\+\_\+spi@{c\+\_\+spi}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{c\+\_\+spi}{c\_spi}}
+{\footnotesize\ttfamily unsigned char c\+\_\+spi}
+
+\mbox{\Hypertarget{main_8cpp_a31b54a58ce21bf866b42b7e53121cdb3}\label{main_8cpp_a31b54a58ce21bf866b42b7e53121cdb3}} 
+\index{main.\+cpp@{main.\+cpp}!Flow@{Flow}}
+\index{Flow@{Flow}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Flow}{Flow}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} Flow = 0}
+
+\mbox{\Hypertarget{main_8cpp_ab632fb0b4d5156ea4df0b1e15410e913}\label{main_8cpp_ab632fb0b4d5156ea4df0b1e15410e913}} 
+\index{main.\+cpp@{main.\+cpp}!frequency@{frequency}}
+\index{frequency@{frequency}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{frequency}{frequency}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} frequency = 0.\+0f}
+
+
+
+Creates a timer interrupt using mbed methods. 
+
+\mbox{\Hypertarget{main_8cpp_a0f1641ae0330127189a1e42165d5f0a3}\label{main_8cpp_a0f1641ae0330127189a1e42165d5f0a3}} 
+\index{main.\+cpp@{main.\+cpp}!iters@{iters}}
+\index{iters@{iters}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{iters}{iters}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} iters = 0}
+
+\mbox{\Hypertarget{main_8cpp_a21730a8b4296b64d9c4ebf30db39c115}\label{main_8cpp_a21730a8b4296b64d9c4ebf30db39c115}} 
+\index{main.\+cpp@{main.\+cpp}!Re@{Re}}
+\index{Re@{Re}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Re}{Re}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} Re = 1500000}
+
+\mbox{\Hypertarget{main_8cpp_af4ecf40cee9c7e0df5d1d79cee070829}\label{main_8cpp_af4ecf40cee9c7e0df5d1d79cee070829}} 
+\index{main.\+cpp@{main.\+cpp}!St\+\_\+int@{St\+\_\+int}}
+\index{St\+\_\+int@{St\+\_\+int}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{St\+\_\+int}{St\_int}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} St\+\_\+int = 0}
+
+\mbox{\Hypertarget{main_8cpp_aeca2f6d177dc8e5ee54061e0acb82822}\label{main_8cpp_aeca2f6d177dc8e5ee54061e0acb82822}} 
+\index{main.\+cpp@{main.\+cpp}!Sw\+Timer\+Isr\+Counter@{Sw\+Timer\+Isr\+Counter}}
+\index{Sw\+Timer\+Isr\+Counter@{Sw\+Timer\+Isr\+Counter}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{Sw\+Timer\+Isr\+Counter}{SwTimerIsrCounter}}
+{\footnotesize\ttfamily volatile \hyperlink{shared_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t} Sw\+Timer\+Isr\+Counter}
+
+\mbox{\Hypertarget{main_8cpp_a6460ae4ad1bf348486378ed1456f1cfa}\label{main_8cpp_a6460ae4ad1bf348486378ed1456f1cfa}} 
+\index{main.\+cpp@{main.\+cpp}!temperature@{temperature}}
+\index{temperature@{temperature}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{temperature}{temperature}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} temperature = 2300}
+
+\mbox{\Hypertarget{main_8cpp_a25d50c6987a26c14c9f4348f82f20640}\label{main_8cpp_a25d50c6987a26c14c9f4348f82f20640}} 
+\index{main.\+cpp@{main.\+cpp}!tick@{tick}}
+\index{tick@{tick}!main.\+cpp@{main.\+cpp}}
+\subsubsection{\texorpdfstring{tick}{tick}}
+{\footnotesize\ttfamily Ticker tick}
+
+
+
+I\+SR counter. 
+

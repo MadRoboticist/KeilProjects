@@ -1,0 +1,665 @@
+\hypertarget{shared_8h}{}\section{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M3\+\_\+\+Keil/shared.h File Reference}
+\label{shared_8h}\index{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M3\+\_\+\+Keil/shared.\+h@{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M3\+\_\+\+Keil/shared.\+h}}
+{\ttfamily \#include \char`\"{}mbed.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{shared_8h_a29e413f6725b2ba32d165ffaa35b01e5}{O\+FF}~0                       /$\ast$ used for readability $\ast$/
+\item 
+\#define \hyperlink{shared_8h_ad76d1750a6cdeebd506bfcd6752554d2}{ON}~1                        /$\ast$ used for readability $\ast$/
+\item 
+\#define \hyperlink{shared_8h_a996bde01ecac342918f0a2c4e7ce7bd5}{NO}~0                        /$\ast$ used for readability $\ast$/
+\item 
+\#define \hyperlink{shared_8h_a7ebc9a785e5ab85457c98595aac81589}{Y\+ES}~1                       /$\ast$ used for readability $\ast$/
+\item 
+\#define \hyperlink{shared_8h_aabc53aa7e6353d8f58b8ae93fd015fab}{T\+EN}~10
+\item 
+\#define \hyperlink{shared_8h_af1b746ba5ab7d0ab657156ebda0f290c}{T\+I\+M\+E\+R0}~T\+M\+R0
+\item 
+\#define \hyperlink{shared_8h_a8bc5e463885769f21393880576c25f6b}{S\+EC}~10000           /$\ast$ 10000 \hyperlink{timer0_8cpp_a2143aff1e880c3dc51e02ba9120825ea}{timer0} interrupts per second (100 usec.) $\ast$/
+\item 
+\#define \hyperlink{shared_8h_a50185000f9f8cd56899b001eec0036ec}{T100\+MS}~0.\+1$\ast$\hyperlink{shared_8h_a8bc5e463885769f21393880576c25f6b}{S\+EC}
+\item 
+\#define \hyperlink{shared_8h_af11a22d509a41e50981459e4fada2387}{T2S}~2$\ast$\hyperlink{shared_8h_a8bc5e463885769f21393880576c25f6b}{S\+EC}
+\item 
+\#define \hyperlink{shared_8h_acf08b26e9b85646a7f06ec2d27899084}{L\+E\+D\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+E\+R\+I\+OD}~.\+5   /$\ast$ in seconds $\ast$/
+\item 
+\#define \hyperlink{shared_8h_a2fa8ceb387e6f891d34c165bab636c08}{C\+L\+O\+C\+K\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+HZ}~8
+\item 
+\#define \hyperlink{shared_8h_ad5003733db85e9d2720dd83336f77e23}{C\+O\+D\+E\+\_\+\+V\+E\+R\+S\+I\+ON}~\char`\"{}2.\+0.\+1 2018/10/04\char`\"{}   /$\ast$   Y\+Y\+YY/MM/DD  $\ast$/
+\item 
+\#define \hyperlink{shared_8h_a6247bc79b0a606bddbf5a90fc3a03194}{C\+O\+P\+Y\+R\+I\+G\+HT}~\char`\"{}Copyright (c) University of Colorado\char`\"{}
+\item 
+\#define \hyperlink{shared_8h_a690f985c933da2ce6fe62b6c61dfa662}{R\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}~10            /$\ast$ size of receive buffer in bytes $\ast$/
+\item 
+\#define \hyperlink{shared_8h_a5d3fb1970e1e98050006978a14b3d95e}{T\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}~40           /$\ast$ size of transmit buffer in bytes $\ast$/
+\item 
+\#define \hyperlink{shared_8h_a8b8af8bedcac87c0d3c68634448b94a7}{M\+S\+G\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}~10
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}
+\item 
+typedef unsigned char \hyperlink{shared_8h_a789d352559efaa396a258805d44f4289}{bit}
+\item 
+typedef unsigned int \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}
+\item 
+typedef unsigned short \hyperlink{shared_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{shared_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean} \{ \hyperlink{shared_8h_a7c6368b321bd9acd0149b030bb8275edaa1e095cc966dbecf6a0d8aad75348d1a}{F\+A\+L\+SE}, 
+\hyperlink{shared_8h_a7c6368b321bd9acd0149b030bb8275edaa82764c3079aea4e60c80e45befbb839}{T\+R\+UE}
+ \}
+\item 
+enum \hyperlink{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6}{dmode} \{ \newline
+\hyperlink{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a4e8e36e4a6c3348cb98fd3223fb07b28}{Q\+U\+I\+ET}, 
+\hyperlink{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a50d1448013c6f17125caee18aa418af7}{N\+O\+R\+M\+AL}, 
+\hyperlink{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a0593585da9181e972974c1274d8f2b4f}{D\+E\+B\+UG}, 
+\hyperlink{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a52f49aba124a600ad9581caabe6a099a}{V\+E\+R\+S\+I\+ON}, 
+\newline
+\hyperlink{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a21447137d62c46e603b924d455e8cd12}{L\+ED}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{shared_8h_a59a4a0c8721f73a8c9d9db5a4cdc6e88}{monitor} (void)
+\begin{DoxyCompactList}\small\item\em D\+E\+B\+UG and D\+I\+A\+G\+N\+O\+S\+T\+IC Mode U\+A\+RT Operation. \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_a2143aff1e880c3dc51e02ba9120825ea}{timer0} (void)
+\item 
+void \hyperlink{shared_8h_a44becc30285e88213a624428b2b46cdf}{serial} (void)
+\begin{DoxyCompactList}\small\item\em function polls the serial port for Rx or Tx data \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_ae84f815ed8083646f214d9791fbce582}{U\+A\+R\+T\+\_\+put} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR})
+\begin{DoxyCompactList}\small\item\em Puts a byte into the transmit buffer. \end{DoxyCompactList}\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_aaeb4f61d67c740edfa880e81081e222c}{U\+A\+R\+T\+\_\+get} (void)
+\begin{DoxyCompactList}\small\item\em Gets the next byte available in the RX buffer. \end{DoxyCompactList}\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_af92515bd65cb7df035cfe5b38c4faf40}{U\+A\+R\+T\+\_\+input} (void)
+\begin{DoxyCompactList}\small\item\em Checks if characters are sitting in the U\+A\+RT input buffer. \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_a4037414d6697571ef8f41e908e6aa539}{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put} (const char $\ast$)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put puts a null terminated string directly (no ram buffer) to the U\+A\+RT in A\+S\+C\+II format. \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_aff5c8c647b366f30a42c0c7193c82328}{U\+A\+R\+T\+\_\+msg\+\_\+put} (const char $\ast$)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+msg\+\_\+put puts a null terminated string through the transmit buffer to the U\+A\+RT port in A\+S\+C\+II format. \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_acc22f971d3bd679767c12aff973e204d}{U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR})
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put puts 1 byte in hex directly (no ram buffer) to the U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_a735a700586542cfb8b36264a8c936543}{U\+A\+R\+T\+\_\+direct\+\_\+put} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR})
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put puts a character directly (no ram buffer) to the U\+A\+RT in A\+S\+C\+II format. \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_a7a715c8a8bf1626e1233073e738ec4d2}{U\+A\+R\+T\+\_\+hex\+\_\+put} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR})
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put puts the high nibble of a byte in h U\+A\+RT port. (currently commented out) \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_a3d25f0fbbf788b76f890da8f0d462729}{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR})
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+put puts the low nibble of a byte in hex directly (no ram buffer) to the U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_ac6316f9c9bc00741ac68cdf505ed13bf}{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put} (\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} word)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put puts 4 bytes in hex directly (no ram buffer) to the U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_a3b21c4a271c6ceda689d8f2f0073816b}{U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR})
+\item 
+void \hyperlink{shared_8h_a29be7c30b6929c50ebb985b228fc1be2}{chk\+\_\+\+U\+A\+R\+T\+\_\+msg} (void)
+\begin{DoxyCompactList}\small\item\em checks for messages in serial port \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_a826db354ae1d910792a0330f8d4eb91a}{U\+A\+R\+T\+\_\+msg\+\_\+process} (void)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Input Message Processing. \end{DoxyCompactList}\item 
+void \hyperlink{shared_8h_ad6e5f59640709c2b2e22f5df6b1b5a65}{status\+\_\+report} (void)
+\item 
+void \hyperlink{shared_8h_acd5157b5f415f4ca9be9b2a23943440c}{set\+\_\+display\+\_\+mode} (void)
+\begin{DoxyCompactList}\small\item\em Function determines the correct display mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{shared_8h_a3a055bd8f39421ff541e8f42bf186ca1}{Error\+\_\+status}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a442cda58cb38998e6b401a206812abc7}{display\+\_\+timer}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a5181f1333dde4900e80f8f5a3a9b8d6f}{display\+\_\+flag}
+\item 
+bool \hyperlink{shared_8h_ac2a05345b955a666fc6d328d89f00c37}{T\+Xflag}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a98f272c95c5042cb7e471c263ff3428a}{tx\+\_\+in\+\_\+progress}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} $\ast$ \hyperlink{shared_8h_a8d695c28e785556b86dac9e45c4c3122}{rx\+\_\+in\+\_\+ptr}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} $\ast$ \hyperlink{shared_8h_a315bac0a214db7b93444e48a9fecf62a}{rx\+\_\+out\+\_\+ptr}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} $\ast$ \hyperlink{shared_8h_af23cf18108f1b1c64f893699ab61f36a}{tx\+\_\+in\+\_\+ptr}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} $\ast$ \hyperlink{shared_8h_ab49cf819b9bda39e93f857840e4ad56b}{tx\+\_\+out\+\_\+ptr}
+\item 
+volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_ab3c7118b2b6cd60ff7109eb2bbcb341c}{swtimer0}
+\item 
+volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a3f17fef7afff10366da305000e60fab8}{swtimer1}
+\item 
+volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a950d3e69a88af19d273174a9d9ad9d32}{swtimer2}
+\item 
+volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a54f04a4f1b3876feefb6f986665ccbbc}{swtimer3}
+\item 
+volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a53fac1bb12d08ab3f827cb58636f5bf8}{swtimer4}
+\item 
+volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a690548ce3dd59501dd3f539b665f7b78}{swtimer5}
+\item 
+volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a2aa5e7d06d65728e09afb95cd7a07ad3}{swtimer6}
+\item 
+volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a60c6a425138705b5dd07afa68d558032}{swtimer7}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a1e67c2f1c20356a956f8f12a133423e0}{serial\+\_\+flag}
+\item 
+enum \hyperlink{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6}{dmode} \hyperlink{shared_8h_a0f999d5d275d3149a605333813bb889d}{display\+\_\+mode}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a25bc7bfd1e3953e7d0829193c1448933}{rx\+\_\+buf} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a5fd5e3c46add89816ee9c575634b5d54}{tx\+\_\+buf} \mbox{[}$\,$\mbox{]}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_ad82c4abfc1c5cefb64c6725d6c544855}{msg\+\_\+buf} \mbox{[}\hyperlink{shared_8h_a8b8af8bedcac87c0d3c68634448b94a7}{M\+S\+G\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}\mbox{]}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{shared_8h_a69fb01b86051dd5bc29e16cd9b6f48db}{msg\+\_\+buf\+\_\+idx}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+
+
+
+
+ -- E\+C\+EN 5803 Mastering Embedded System Architecture -- -- Project 1 Module 3 -- -- Microcontroller Firmware -- -- \hyperlink{shared_8h}{shared.\+h} -- \subsubsection*{-- -- }
+
+-- \subsubsection*{-- Designed for\+: University of Colorado at Boulder }
+
+-- -- Designed by\+: Tim Scherr \subsubsection*{-- Revised by\+: David James \& Ismail Yesildirek }
+
+-- Version\+: 2.\+0.\+1 -- Date of current revision\+: 2018-\/10-\/04 -- Target Microcontroller\+: Freescale M\+K\+L25\+Z\+V\+M\+T4 -- Tools used\+: A\+RM mbed compiler -- A\+RM mbed S\+DK \subsubsection*{-- Freescale F\+R\+D\+M-\/\+K\+L25Z Freedom Board }
+
+-- \subsubsection*{-- Functional Description\+: Header file for all globals }
+
+\subsubsection*{-- Copyright (c) 2015 Tim Scherr All rights reserved. }
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{shared_8h_a2fa8ceb387e6f891d34c165bab636c08}\label{shared_8h_a2fa8ceb387e6f891d34c165bab636c08}} 
+\index{shared.\+h@{shared.\+h}!C\+L\+O\+C\+K\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+HZ@{C\+L\+O\+C\+K\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+HZ}}
+\index{C\+L\+O\+C\+K\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+HZ@{C\+L\+O\+C\+K\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+HZ}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{C\+L\+O\+C\+K\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+HZ}{CLOCK\_FREQUENCY\_MHZ}}
+{\footnotesize\ttfamily \#define C\+L\+O\+C\+K\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+HZ~8}
+
+\mbox{\Hypertarget{shared_8h_ad5003733db85e9d2720dd83336f77e23}\label{shared_8h_ad5003733db85e9d2720dd83336f77e23}} 
+\index{shared.\+h@{shared.\+h}!C\+O\+D\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{C\+O\+D\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{C\+O\+D\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{C\+O\+D\+E\+\_\+\+V\+E\+R\+S\+I\+ON}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+D\+E\+\_\+\+V\+E\+R\+S\+I\+ON}{CODE\_VERSION}}
+{\footnotesize\ttfamily \#define C\+O\+D\+E\+\_\+\+V\+E\+R\+S\+I\+ON~\char`\"{}2.\+0.\+1 2018/10/04\char`\"{}   /$\ast$   Y\+Y\+YY/MM/DD  $\ast$/}
+
+\mbox{\Hypertarget{shared_8h_a6247bc79b0a606bddbf5a90fc3a03194}\label{shared_8h_a6247bc79b0a606bddbf5a90fc3a03194}} 
+\index{shared.\+h@{shared.\+h}!C\+O\+P\+Y\+R\+I\+G\+HT@{C\+O\+P\+Y\+R\+I\+G\+HT}}
+\index{C\+O\+P\+Y\+R\+I\+G\+HT@{C\+O\+P\+Y\+R\+I\+G\+HT}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+P\+Y\+R\+I\+G\+HT}{COPYRIGHT}}
+{\footnotesize\ttfamily \#define C\+O\+P\+Y\+R\+I\+G\+HT~\char`\"{}Copyright (c) University of Colorado\char`\"{}}
+
+\mbox{\Hypertarget{shared_8h_acf08b26e9b85646a7f06ec2d27899084}\label{shared_8h_acf08b26e9b85646a7f06ec2d27899084}} 
+\index{shared.\+h@{shared.\+h}!L\+E\+D\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+E\+R\+I\+OD@{L\+E\+D\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+E\+R\+I\+OD}}
+\index{L\+E\+D\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+E\+R\+I\+OD@{L\+E\+D\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+E\+R\+I\+OD}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{L\+E\+D\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+E\+R\+I\+OD}{LED\_FLASH\_PERIOD}}
+{\footnotesize\ttfamily \#define L\+E\+D\+\_\+\+F\+L\+A\+S\+H\+\_\+\+P\+E\+R\+I\+OD~.\+5   /$\ast$ in seconds $\ast$/}
+
+\mbox{\Hypertarget{shared_8h_a8b8af8bedcac87c0d3c68634448b94a7}\label{shared_8h_a8b8af8bedcac87c0d3c68634448b94a7}} 
+\index{shared.\+h@{shared.\+h}!M\+S\+G\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{M\+S\+G\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{M\+S\+G\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{M\+S\+G\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{M\+S\+G\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}{MSG\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define M\+S\+G\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE~10}
+
+\mbox{\Hypertarget{shared_8h_a996bde01ecac342918f0a2c4e7ce7bd5}\label{shared_8h_a996bde01ecac342918f0a2c4e7ce7bd5}} 
+\index{shared.\+h@{shared.\+h}!NO@{NO}}
+\index{NO@{NO}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{NO}{NO}}
+{\footnotesize\ttfamily \#define NO~0                        /$\ast$ used for readability $\ast$/}
+
+\mbox{\Hypertarget{shared_8h_a29e413f6725b2ba32d165ffaa35b01e5}\label{shared_8h_a29e413f6725b2ba32d165ffaa35b01e5}} 
+\index{shared.\+h@{shared.\+h}!O\+FF@{O\+FF}}
+\index{O\+FF@{O\+FF}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{O\+FF}{OFF}}
+{\footnotesize\ttfamily \#define O\+FF~0                       /$\ast$ used for readability $\ast$/}
+
+\mbox{\Hypertarget{shared_8h_ad76d1750a6cdeebd506bfcd6752554d2}\label{shared_8h_ad76d1750a6cdeebd506bfcd6752554d2}} 
+\index{shared.\+h@{shared.\+h}!ON@{ON}}
+\index{ON@{ON}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{ON}{ON}}
+{\footnotesize\ttfamily \#define ON~1                        /$\ast$ used for readability $\ast$/}
+
+\mbox{\Hypertarget{shared_8h_a690f985c933da2ce6fe62b6c61dfa662}\label{shared_8h_a690f985c933da2ce6fe62b6c61dfa662}} 
+\index{shared.\+h@{shared.\+h}!R\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{R\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{R\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{R\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{R\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}{RX\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define R\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE~10            /$\ast$ size of receive buffer in bytes $\ast$/}
+
+\mbox{\Hypertarget{shared_8h_a8bc5e463885769f21393880576c25f6b}\label{shared_8h_a8bc5e463885769f21393880576c25f6b}} 
+\index{shared.\+h@{shared.\+h}!S\+EC@{S\+EC}}
+\index{S\+EC@{S\+EC}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{S\+EC}{SEC}}
+{\footnotesize\ttfamily \#define S\+EC~10000           /$\ast$ 10000 \hyperlink{timer0_8cpp_a2143aff1e880c3dc51e02ba9120825ea}{timer0} interrupts per second (100 usec.) $\ast$/}
+
+\mbox{\Hypertarget{shared_8h_a50185000f9f8cd56899b001eec0036ec}\label{shared_8h_a50185000f9f8cd56899b001eec0036ec}} 
+\index{shared.\+h@{shared.\+h}!T100\+MS@{T100\+MS}}
+\index{T100\+MS@{T100\+MS}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{T100\+MS}{T100MS}}
+{\footnotesize\ttfamily \#define T100\+MS~0.\+1$\ast$\hyperlink{shared_8h_a8bc5e463885769f21393880576c25f6b}{S\+EC}}
+
+\mbox{\Hypertarget{shared_8h_af11a22d509a41e50981459e4fada2387}\label{shared_8h_af11a22d509a41e50981459e4fada2387}} 
+\index{shared.\+h@{shared.\+h}!T2S@{T2S}}
+\index{T2S@{T2S}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{T2S}{T2S}}
+{\footnotesize\ttfamily \#define T2S~2$\ast$\hyperlink{shared_8h_a8bc5e463885769f21393880576c25f6b}{S\+EC}}
+
+\mbox{\Hypertarget{shared_8h_aabc53aa7e6353d8f58b8ae93fd015fab}\label{shared_8h_aabc53aa7e6353d8f58b8ae93fd015fab}} 
+\index{shared.\+h@{shared.\+h}!T\+EN@{T\+EN}}
+\index{T\+EN@{T\+EN}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{T\+EN}{TEN}}
+{\footnotesize\ttfamily \#define T\+EN~10}
+
+\mbox{\Hypertarget{shared_8h_af1b746ba5ab7d0ab657156ebda0f290c}\label{shared_8h_af1b746ba5ab7d0ab657156ebda0f290c}} 
+\index{shared.\+h@{shared.\+h}!T\+I\+M\+E\+R0@{T\+I\+M\+E\+R0}}
+\index{T\+I\+M\+E\+R0@{T\+I\+M\+E\+R0}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+R0}{TIMER0}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+R0~T\+M\+R0}
+
+\mbox{\Hypertarget{shared_8h_a5d3fb1970e1e98050006978a14b3d95e}\label{shared_8h_a5d3fb1970e1e98050006978a14b3d95e}} 
+\index{shared.\+h@{shared.\+h}!T\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{T\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{T\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{T\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{T\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}{TX\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define T\+X\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE~40           /$\ast$ size of transmit buffer in bytes $\ast$/}
+
+\mbox{\Hypertarget{shared_8h_a7ebc9a785e5ab85457c98595aac81589}\label{shared_8h_a7ebc9a785e5ab85457c98595aac81589}} 
+\index{shared.\+h@{shared.\+h}!Y\+ES@{Y\+ES}}
+\index{Y\+ES@{Y\+ES}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{Y\+ES}{YES}}
+{\footnotesize\ttfamily \#define Y\+ES~1                       /$\ast$ used for readability $\ast$/}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{shared_8h_a789d352559efaa396a258805d44f4289}\label{shared_8h_a789d352559efaa396a258805d44f4289}} 
+\index{shared.\+h@{shared.\+h}!bit@{bit}}
+\index{bit@{bit}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{bit}{bit}}
+{\footnotesize\ttfamily typedef unsigned char \hyperlink{shared_8h_a789d352559efaa396a258805d44f4289}{bit}}
+
+\mbox{\Hypertarget{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}\label{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}} 
+\index{shared.\+h@{shared.\+h}!U\+C\+H\+AR@{U\+C\+H\+AR}}
+\index{U\+C\+H\+AR@{U\+C\+H\+AR}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+C\+H\+AR}{UCHAR}}
+{\footnotesize\ttfamily typedef unsigned char \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}
+
+\mbox{\Hypertarget{shared_8h_a273cf69d639a59973b6019625df33e30}\label{shared_8h_a273cf69d639a59973b6019625df33e30}} 
+\index{shared.\+h@{shared.\+h}!uint16\+\_\+t@{uint16\+\_\+t}}
+\index{uint16\+\_\+t@{uint16\+\_\+t}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{uint16\+\_\+t}{uint16\_t}}
+{\footnotesize\ttfamily typedef unsigned short \hyperlink{shared_8h_a273cf69d639a59973b6019625df33e30}{uint16\+\_\+t}}
+
+\mbox{\Hypertarget{shared_8h_a435d1572bf3f880d55459d9805097f62}\label{shared_8h_a435d1572bf3f880d55459d9805097f62}} 
+\index{shared.\+h@{shared.\+h}!uint32\+\_\+t@{uint32\+\_\+t}}
+\index{uint32\+\_\+t@{uint32\+\_\+t}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{uint32\+\_\+t}{uint32\_t}}
+{\footnotesize\ttfamily typedef unsigned int \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{shared_8h_a7c6368b321bd9acd0149b030bb8275ed}\label{shared_8h_a7c6368b321bd9acd0149b030bb8275ed}} 
+\index{shared.\+h@{shared.\+h}!boolean@{boolean}}
+\index{boolean@{boolean}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{boolean}{boolean}}
+{\footnotesize\ttfamily enum \hyperlink{shared_8h_a7c6368b321bd9acd0149b030bb8275ed}{boolean}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F\+A\+L\+SE@{F\+A\+L\+SE}!shared.\+h@{shared.\+h}}\index{shared.\+h@{shared.\+h}!F\+A\+L\+SE@{F\+A\+L\+SE}}}\mbox{\Hypertarget{shared_8h_a7c6368b321bd9acd0149b030bb8275edaa1e095cc966dbecf6a0d8aad75348d1a}\label{shared_8h_a7c6368b321bd9acd0149b030bb8275edaa1e095cc966dbecf6a0d8aad75348d1a}} 
+F\+A\+L\+SE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+R\+UE@{T\+R\+UE}!shared.\+h@{shared.\+h}}\index{shared.\+h@{shared.\+h}!T\+R\+UE@{T\+R\+UE}}}\mbox{\Hypertarget{shared_8h_a7c6368b321bd9acd0149b030bb8275edaa82764c3079aea4e60c80e45befbb839}\label{shared_8h_a7c6368b321bd9acd0149b030bb8275edaa82764c3079aea4e60c80e45befbb839}} 
+T\+R\+UE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6}\label{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6}} 
+\index{shared.\+h@{shared.\+h}!dmode@{dmode}}
+\index{dmode@{dmode}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{dmode}{dmode}}
+{\footnotesize\ttfamily enum \hyperlink{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6}{dmode}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q\+U\+I\+ET@{Q\+U\+I\+ET}!shared.\+h@{shared.\+h}}\index{shared.\+h@{shared.\+h}!Q\+U\+I\+ET@{Q\+U\+I\+ET}}}\mbox{\Hypertarget{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a4e8e36e4a6c3348cb98fd3223fb07b28}\label{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a4e8e36e4a6c3348cb98fd3223fb07b28}} 
+Q\+U\+I\+ET&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N\+O\+R\+M\+AL@{N\+O\+R\+M\+AL}!shared.\+h@{shared.\+h}}\index{shared.\+h@{shared.\+h}!N\+O\+R\+M\+AL@{N\+O\+R\+M\+AL}}}\mbox{\Hypertarget{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a50d1448013c6f17125caee18aa418af7}\label{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a50d1448013c6f17125caee18aa418af7}} 
+N\+O\+R\+M\+AL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+E\+B\+UG@{D\+E\+B\+UG}!shared.\+h@{shared.\+h}}\index{shared.\+h@{shared.\+h}!D\+E\+B\+UG@{D\+E\+B\+UG}}}\mbox{\Hypertarget{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a0593585da9181e972974c1274d8f2b4f}\label{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a0593585da9181e972974c1274d8f2b4f}} 
+D\+E\+B\+UG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V\+E\+R\+S\+I\+ON@{V\+E\+R\+S\+I\+ON}!shared.\+h@{shared.\+h}}\index{shared.\+h@{shared.\+h}!V\+E\+R\+S\+I\+ON@{V\+E\+R\+S\+I\+ON}}}\mbox{\Hypertarget{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a52f49aba124a600ad9581caabe6a099a}\label{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a52f49aba124a600ad9581caabe6a099a}} 
+V\+E\+R\+S\+I\+ON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+ED@{L\+ED}!shared.\+h@{shared.\+h}}\index{shared.\+h@{shared.\+h}!L\+ED@{L\+ED}}}\mbox{\Hypertarget{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a21447137d62c46e603b924d455e8cd12}\label{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6a21447137d62c46e603b924d455e8cd12}} 
+L\+ED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{shared_8h_a29be7c30b6929c50ebb985b228fc1be2}\label{shared_8h_a29be7c30b6929c50ebb985b228fc1be2}} 
+\index{shared.\+h@{shared.\+h}!chk\+\_\+\+U\+A\+R\+T\+\_\+msg@{chk\+\_\+\+U\+A\+R\+T\+\_\+msg}}
+\index{chk\+\_\+\+U\+A\+R\+T\+\_\+msg@{chk\+\_\+\+U\+A\+R\+T\+\_\+msg}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{chk\+\_\+\+U\+A\+R\+T\+\_\+msg()}{chk\_UART\_msg()}}
+{\footnotesize\ttfamily void chk\+\_\+\+U\+A\+R\+T\+\_\+msg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+checks for messages in serial port 
+
+\mbox{\Hypertarget{shared_8h_a59a4a0c8721f73a8c9d9db5a4cdc6e88}\label{shared_8h_a59a4a0c8721f73a8c9d9db5a4cdc6e88}} 
+\index{shared.\+h@{shared.\+h}!monitor@{monitor}}
+\index{monitor@{monitor}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{monitor()}{monitor()}}
+{\footnotesize\ttfamily void monitor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+D\+E\+B\+UG and D\+I\+A\+G\+N\+O\+S\+T\+IC Mode U\+A\+RT Operation. 
+
+\mbox{\Hypertarget{shared_8h_a44becc30285e88213a624428b2b46cdf}\label{shared_8h_a44becc30285e88213a624428b2b46cdf}} 
+\index{shared.\+h@{shared.\+h}!serial@{serial}}
+\index{serial@{serial}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{serial()}{serial()}}
+{\footnotesize\ttfamily void serial (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+function polls the serial port for Rx or Tx data 
+
+\mbox{\Hypertarget{shared_8h_acd5157b5f415f4ca9be9b2a23943440c}\label{shared_8h_acd5157b5f415f4ca9be9b2a23943440c}} 
+\index{shared.\+h@{shared.\+h}!set\+\_\+display\+\_\+mode@{set\+\_\+display\+\_\+mode}}
+\index{set\+\_\+display\+\_\+mode@{set\+\_\+display\+\_\+mode}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{set\+\_\+display\+\_\+mode()}{set\_display\_mode()}}
+{\footnotesize\ttfamily void set\+\_\+display\+\_\+mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function determines the correct display mode. 
+
+register displays, sensor states, and calculated output
+
+There is deliberate delay in switching between modes to allow the R\+S-\/232 cable to be plugged into the header without causing problems.
+
+Set Display Mode Function The 3 display modes operate as follows\+:
+
+N\+O\+R\+M\+AL M\+O\+DE Outputs only mode and state information changes and calculated outputs
+
+Q\+U\+I\+ET M\+O\+DE No Outputs \mbox{\Hypertarget{shared_8h_ad6e5f59640709c2b2e22f5df6b1b5a65}\label{shared_8h_ad6e5f59640709c2b2e22f5df6b1b5a65}} 
+\index{shared.\+h@{shared.\+h}!status\+\_\+report@{status\+\_\+report}}
+\index{status\+\_\+report@{status\+\_\+report}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{status\+\_\+report()}{status\_report()}}
+{\footnotesize\ttfamily void status\+\_\+report (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{shared_8h_a2143aff1e880c3dc51e02ba9120825ea}\label{shared_8h_a2143aff1e880c3dc51e02ba9120825ea}} 
+\index{shared.\+h@{shared.\+h}!timer0@{timer0}}
+\index{timer0@{timer0}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{timer0()}{timer0()}}
+{\footnotesize\ttfamily void timer0 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{shared_8h_acc22f971d3bd679767c12aff973e204d}\label{shared_8h_acc22f971d3bd679767c12aff973e204d}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put()}{UART\_direct\_hex\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put puts 1 byte in hex directly (no ram buffer) to the U\+A\+RT. 
+
+\mbox{\Hypertarget{shared_8h_a4037414d6697571ef8f41e908e6aa539}\label{shared_8h_a4037414d6697571ef8f41e908e6aa539}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put()}{UART\_direct\_msg\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put puts a null terminated string directly (no ram buffer) to the U\+A\+RT in A\+S\+C\+II format. 
+
+\mbox{\Hypertarget{shared_8h_a735a700586542cfb8b36264a8c936543}\label{shared_8h_a735a700586542cfb8b36264a8c936543}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+direct\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+direct\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+put}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+direct\+\_\+put()}{UART\_direct\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+direct\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put puts a character directly (no ram buffer) to the U\+A\+RT in A\+S\+C\+II format. 
+
+\mbox{\Hypertarget{shared_8h_ac6316f9c9bc00741ac68cdf505ed13bf}\label{shared_8h_ac6316f9c9bc00741ac68cdf505ed13bf}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put()}{UART\_direct\_word\_hex\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}}]{word }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put puts 4 bytes in hex directly (no ram buffer) to the U\+A\+RT. 
+
+\mbox{\Hypertarget{shared_8h_aaeb4f61d67c740edfa880e81081e222c}\label{shared_8h_aaeb4f61d67c740edfa880e81081e222c}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+get@{U\+A\+R\+T\+\_\+get}}
+\index{U\+A\+R\+T\+\_\+get@{U\+A\+R\+T\+\_\+get}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+get()}{UART\_get()}}
+{\footnotesize\ttfamily U\+A\+R\+T\+\_\+get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the next byte available in the RX buffer. 
+
+U\+A\+R\+T\+\_\+get gets the next byte if one is available from the receive buffer at the location pointed to by rx\+\_\+out\+\_\+idx. The pointer is circularly incremented and the byte is returned in R7. Should no byte be available the function will wait until one is available. There is no need to disable the serial interrupt which modifies rx\+\_\+in\+\_\+idx since the function is looking for a \mbox{\Hypertarget{shared_8h_a7a715c8a8bf1626e1233073e738ec4d2}\label{shared_8h_a7a715c8a8bf1626e1233073e738ec4d2}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+hex\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+hex\+\_\+put}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+hex\+\_\+put()}{UART\_hex\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+hex\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put puts the high nibble of a byte in h U\+A\+RT port. (currently commented out) 
+
+\mbox{\Hypertarget{shared_8h_a3b21c4a271c6ceda689d8f2f0073816b}\label{shared_8h_a3b21c4a271c6ceda689d8f2f0073816b}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put@{U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put@{U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put()}{UART\_high\_nibble\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{shared_8h_af92515bd65cb7df035cfe5b38c4faf40}\label{shared_8h_af92515bd65cb7df035cfe5b38c4faf40}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+input@{U\+A\+R\+T\+\_\+input}}
+\index{U\+A\+R\+T\+\_\+input@{U\+A\+R\+T\+\_\+input}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+input()}{UART\_input()}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} U\+A\+R\+T\+\_\+input (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks if characters are sitting in the U\+A\+RT input buffer. 
+
+U\+A\+R\+T\+\_\+input returns a 1 if 1 or more receive byte(s) is(are) available and a 0 if the receive buffer rx\+\_\+buf is empty. There is no need to disable the serial interrupt which modifies rx\+\_\+in\+\_\+idx since function is looking for a compare only between rx\+\_\+in\+\_\+idx \& rx\+\_\+out\+\_\+idx. \mbox{\Hypertarget{shared_8h_a3d25f0fbbf788b76f890da8f0d462729}\label{shared_8h_a3d25f0fbbf788b76f890da8f0d462729}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put@{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put@{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put()}{UART\_low\_nibble\_direct\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+put puts the low nibble of a byte in hex directly (no ram buffer) to the U\+A\+RT. 
+
+\mbox{\Hypertarget{shared_8h_a826db354ae1d910792a0330f8d4eb91a}\label{shared_8h_a826db354ae1d910792a0330f8d4eb91a}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+msg\+\_\+process@{U\+A\+R\+T\+\_\+msg\+\_\+process}}
+\index{U\+A\+R\+T\+\_\+msg\+\_\+process@{U\+A\+R\+T\+\_\+msg\+\_\+process}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+msg\+\_\+process()}{UART\_msg\_process()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+msg\+\_\+process (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT Input Message Processing. 
+
+\mbox{\Hypertarget{shared_8h_aff5c8c647b366f30a42c0c7193c82328}\label{shared_8h_aff5c8c647b366f30a42c0c7193c82328}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+msg\+\_\+put@{U\+A\+R\+T\+\_\+msg\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+msg\+\_\+put@{U\+A\+R\+T\+\_\+msg\+\_\+put}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+msg\+\_\+put()}{UART\_msg\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+msg\+\_\+put (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+msg\+\_\+put puts a null terminated string through the transmit buffer to the U\+A\+RT port in A\+S\+C\+II format. 
+
+\mbox{\Hypertarget{shared_8h_ae84f815ed8083646f214d9791fbce582}\label{shared_8h_ae84f815ed8083646f214d9791fbce582}} 
+\index{shared.\+h@{shared.\+h}!U\+A\+R\+T\+\_\+put@{U\+A\+R\+T\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+put@{U\+A\+R\+T\+\_\+put}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+put()}{UART\_put()}}
+{\footnotesize\ttfamily U\+A\+R\+T\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{ }\end{DoxyParamCaption})}
+
+
+
+Puts a byte into the transmit buffer. 
+
+Puts a byte, to the transmit buffer at the location pointed to by tx\+\_\+in\+\_\+idx. The pointer is incremented circularly as described previously. If the transmit buffer should wrap around (should be designed not to happen), data will be lost. The serial interrupt must be temporarily disabled since it reads tx\+\_\+in\+\_\+idx and this routine updates tx\+\_\+in\+\_\+idx which is a 16 bit value. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{shared_8h_a5181f1333dde4900e80f8f5a3a9b8d6f}\label{shared_8h_a5181f1333dde4900e80f8f5a3a9b8d6f}} 
+\index{shared.\+h@{shared.\+h}!display\+\_\+flag@{display\+\_\+flag}}
+\index{display\+\_\+flag@{display\+\_\+flag}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{display\+\_\+flag}{display\_flag}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} display\+\_\+flag}
+
+\mbox{\Hypertarget{shared_8h_a0f999d5d275d3149a605333813bb889d}\label{shared_8h_a0f999d5d275d3149a605333813bb889d}} 
+\index{shared.\+h@{shared.\+h}!display\+\_\+mode@{display\+\_\+mode}}
+\index{display\+\_\+mode@{display\+\_\+mode}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{display\+\_\+mode}{display\_mode}}
+{\footnotesize\ttfamily enum \hyperlink{shared_8h_ad8667bac763ba2aa5d7c29541fecf0a6}{dmode} display\+\_\+mode}
+
+\mbox{\Hypertarget{shared_8h_a442cda58cb38998e6b401a206812abc7}\label{shared_8h_a442cda58cb38998e6b401a206812abc7}} 
+\index{shared.\+h@{shared.\+h}!display\+\_\+timer@{display\+\_\+timer}}
+\index{display\+\_\+timer@{display\+\_\+timer}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{display\+\_\+timer}{display\_timer}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} display\+\_\+timer}
+
+\mbox{\Hypertarget{shared_8h_a3a055bd8f39421ff541e8f42bf186ca1}\label{shared_8h_a3a055bd8f39421ff541e8f42bf186ca1}} 
+\index{shared.\+h@{shared.\+h}!Error\+\_\+status@{Error\+\_\+status}}
+\index{Error\+\_\+status@{Error\+\_\+status}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{Error\+\_\+status}{Error\_status}}
+{\footnotesize\ttfamily unsigned char Error\+\_\+status}
+
+\mbox{\Hypertarget{shared_8h_ad82c4abfc1c5cefb64c6725d6c544855}\label{shared_8h_ad82c4abfc1c5cefb64c6725d6c544855}} 
+\index{shared.\+h@{shared.\+h}!msg\+\_\+buf@{msg\+\_\+buf}}
+\index{msg\+\_\+buf@{msg\+\_\+buf}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{msg\+\_\+buf}{msg\_buf}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} msg\+\_\+buf\mbox{[}\hyperlink{shared_8h_a8b8af8bedcac87c0d3c68634448b94a7}{M\+S\+G\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}\mbox{]}}
+
+\mbox{\Hypertarget{shared_8h_a69fb01b86051dd5bc29e16cd9b6f48db}\label{shared_8h_a69fb01b86051dd5bc29e16cd9b6f48db}} 
+\index{shared.\+h@{shared.\+h}!msg\+\_\+buf\+\_\+idx@{msg\+\_\+buf\+\_\+idx}}
+\index{msg\+\_\+buf\+\_\+idx@{msg\+\_\+buf\+\_\+idx}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{msg\+\_\+buf\+\_\+idx}{msg\_buf\_idx}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} msg\+\_\+buf\+\_\+idx}
+
+\mbox{\Hypertarget{shared_8h_a25bc7bfd1e3953e7d0829193c1448933}\label{shared_8h_a25bc7bfd1e3953e7d0829193c1448933}} 
+\index{shared.\+h@{shared.\+h}!rx\+\_\+buf@{rx\+\_\+buf}}
+\index{rx\+\_\+buf@{rx\+\_\+buf}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{rx\+\_\+buf}{rx\_buf}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} rx\+\_\+buf\mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{shared_8h_a8d695c28e785556b86dac9e45c4c3122}\label{shared_8h_a8d695c28e785556b86dac9e45c4c3122}} 
+\index{shared.\+h@{shared.\+h}!rx\+\_\+in\+\_\+ptr@{rx\+\_\+in\+\_\+ptr}}
+\index{rx\+\_\+in\+\_\+ptr@{rx\+\_\+in\+\_\+ptr}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{rx\+\_\+in\+\_\+ptr}{rx\_in\_ptr}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}$\ast$ rx\+\_\+in\+\_\+ptr}
+
+\mbox{\Hypertarget{shared_8h_a315bac0a214db7b93444e48a9fecf62a}\label{shared_8h_a315bac0a214db7b93444e48a9fecf62a}} 
+\index{shared.\+h@{shared.\+h}!rx\+\_\+out\+\_\+ptr@{rx\+\_\+out\+\_\+ptr}}
+\index{rx\+\_\+out\+\_\+ptr@{rx\+\_\+out\+\_\+ptr}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{rx\+\_\+out\+\_\+ptr}{rx\_out\_ptr}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}$\ast$ rx\+\_\+out\+\_\+ptr}
+
+\mbox{\Hypertarget{shared_8h_a1e67c2f1c20356a956f8f12a133423e0}\label{shared_8h_a1e67c2f1c20356a956f8f12a133423e0}} 
+\index{shared.\+h@{shared.\+h}!serial\+\_\+flag@{serial\+\_\+flag}}
+\index{serial\+\_\+flag@{serial\+\_\+flag}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{serial\+\_\+flag}{serial\_flag}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} serial\+\_\+flag}
+
+\mbox{\Hypertarget{shared_8h_ab3c7118b2b6cd60ff7109eb2bbcb341c}\label{shared_8h_ab3c7118b2b6cd60ff7109eb2bbcb341c}} 
+\index{shared.\+h@{shared.\+h}!swtimer0@{swtimer0}}
+\index{swtimer0@{swtimer0}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{swtimer0}{swtimer0}}
+{\footnotesize\ttfamily volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} swtimer0}
+
+\mbox{\Hypertarget{shared_8h_a3f17fef7afff10366da305000e60fab8}\label{shared_8h_a3f17fef7afff10366da305000e60fab8}} 
+\index{shared.\+h@{shared.\+h}!swtimer1@{swtimer1}}
+\index{swtimer1@{swtimer1}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{swtimer1}{swtimer1}}
+{\footnotesize\ttfamily volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} swtimer1}
+
+\mbox{\Hypertarget{shared_8h_a950d3e69a88af19d273174a9d9ad9d32}\label{shared_8h_a950d3e69a88af19d273174a9d9ad9d32}} 
+\index{shared.\+h@{shared.\+h}!swtimer2@{swtimer2}}
+\index{swtimer2@{swtimer2}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{swtimer2}{swtimer2}}
+{\footnotesize\ttfamily volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} swtimer2}
+
+\mbox{\Hypertarget{shared_8h_a54f04a4f1b3876feefb6f986665ccbbc}\label{shared_8h_a54f04a4f1b3876feefb6f986665ccbbc}} 
+\index{shared.\+h@{shared.\+h}!swtimer3@{swtimer3}}
+\index{swtimer3@{swtimer3}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{swtimer3}{swtimer3}}
+{\footnotesize\ttfamily volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} swtimer3}
+
+\mbox{\Hypertarget{shared_8h_a53fac1bb12d08ab3f827cb58636f5bf8}\label{shared_8h_a53fac1bb12d08ab3f827cb58636f5bf8}} 
+\index{shared.\+h@{shared.\+h}!swtimer4@{swtimer4}}
+\index{swtimer4@{swtimer4}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{swtimer4}{swtimer4}}
+{\footnotesize\ttfamily volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} swtimer4}
+
+\mbox{\Hypertarget{shared_8h_a690548ce3dd59501dd3f539b665f7b78}\label{shared_8h_a690548ce3dd59501dd3f539b665f7b78}} 
+\index{shared.\+h@{shared.\+h}!swtimer5@{swtimer5}}
+\index{swtimer5@{swtimer5}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{swtimer5}{swtimer5}}
+{\footnotesize\ttfamily volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} swtimer5}
+
+\mbox{\Hypertarget{shared_8h_a2aa5e7d06d65728e09afb95cd7a07ad3}\label{shared_8h_a2aa5e7d06d65728e09afb95cd7a07ad3}} 
+\index{shared.\+h@{shared.\+h}!swtimer6@{swtimer6}}
+\index{swtimer6@{swtimer6}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{swtimer6}{swtimer6}}
+{\footnotesize\ttfamily volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} swtimer6}
+
+\mbox{\Hypertarget{shared_8h_a60c6a425138705b5dd07afa68d558032}\label{shared_8h_a60c6a425138705b5dd07afa68d558032}} 
+\index{shared.\+h@{shared.\+h}!swtimer7@{swtimer7}}
+\index{swtimer7@{swtimer7}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{swtimer7}{swtimer7}}
+{\footnotesize\ttfamily volatile \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} swtimer7}
+
+\mbox{\Hypertarget{shared_8h_a5fd5e3c46add89816ee9c575634b5d54}\label{shared_8h_a5fd5e3c46add89816ee9c575634b5d54}} 
+\index{shared.\+h@{shared.\+h}!tx\+\_\+buf@{tx\+\_\+buf}}
+\index{tx\+\_\+buf@{tx\+\_\+buf}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{tx\+\_\+buf}{tx\_buf}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} tx\+\_\+buf\mbox{[}$\,$\mbox{]}}
+
+\mbox{\Hypertarget{shared_8h_a98f272c95c5042cb7e471c263ff3428a}\label{shared_8h_a98f272c95c5042cb7e471c263ff3428a}} 
+\index{shared.\+h@{shared.\+h}!tx\+\_\+in\+\_\+progress@{tx\+\_\+in\+\_\+progress}}
+\index{tx\+\_\+in\+\_\+progress@{tx\+\_\+in\+\_\+progress}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{tx\+\_\+in\+\_\+progress}{tx\_in\_progress}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} tx\+\_\+in\+\_\+progress}
+
+\mbox{\Hypertarget{shared_8h_af23cf18108f1b1c64f893699ab61f36a}\label{shared_8h_af23cf18108f1b1c64f893699ab61f36a}} 
+\index{shared.\+h@{shared.\+h}!tx\+\_\+in\+\_\+ptr@{tx\+\_\+in\+\_\+ptr}}
+\index{tx\+\_\+in\+\_\+ptr@{tx\+\_\+in\+\_\+ptr}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{tx\+\_\+in\+\_\+ptr}{tx\_in\_ptr}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}$\ast$ tx\+\_\+in\+\_\+ptr}
+
+\mbox{\Hypertarget{shared_8h_ab49cf819b9bda39e93f857840e4ad56b}\label{shared_8h_ab49cf819b9bda39e93f857840e4ad56b}} 
+\index{shared.\+h@{shared.\+h}!tx\+\_\+out\+\_\+ptr@{tx\+\_\+out\+\_\+ptr}}
+\index{tx\+\_\+out\+\_\+ptr@{tx\+\_\+out\+\_\+ptr}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{tx\+\_\+out\+\_\+ptr}{tx\_out\_ptr}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}$\ast$ tx\+\_\+out\+\_\+ptr}
+
+\mbox{\Hypertarget{shared_8h_ac2a05345b955a666fc6d328d89f00c37}\label{shared_8h_ac2a05345b955a666fc6d328d89f00c37}} 
+\index{shared.\+h@{shared.\+h}!T\+Xflag@{T\+Xflag}}
+\index{T\+Xflag@{T\+Xflag}!shared.\+h@{shared.\+h}}
+\subsubsection{\texorpdfstring{T\+Xflag}{TXflag}}
+{\footnotesize\ttfamily bool T\+Xflag}
+

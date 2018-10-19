@@ -1,0 +1,175 @@
+\hypertarget{_monitor_8cpp}{}\section{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M4\+\_\+\+Keil/\+Monitor.cpp File Reference}
+\label{_monitor_8cpp}\index{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M4\+\_\+\+Keil/\+Monitor.\+cpp@{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M4\+\_\+\+Keil/\+Monitor.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}shared.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Digital\+Out \hyperlink{_monitor_8cpp_aa5e13a31fefb89d68dd999f7badd48fb}{green\+L\+ED} (L\+E\+D\+\_\+\+G\+R\+E\+EN)
+\item 
+\+\_\+\+\_\+asm \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} \hyperlink{_monitor_8cpp_aed369562e3b59504cdb2bdc4915c70f8}{get\+R0} ()
+\begin{DoxyCompactList}\small\item\em assembly routine which returns the unaltered contents of register r0 \end{DoxyCompactList}\item 
+\+\_\+\+\_\+asm void \hyperlink{_monitor_8cpp_a914c505285467a43a59d01e856e14dd2}{get\+Rn} (\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} reglist\mbox{[}16\mbox{]})
+\begin{DoxyCompactList}\small\item\em assembly routine which fills a uint32\+\_\+t\mbox{[}16\mbox{]} array\textquotesingle{}s 1-\/15 elements with r1-\/r15 \end{DoxyCompactList}\item 
+\+\_\+\+\_\+asm \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} \hyperlink{_monitor_8cpp_a1a065199e06d3498b0c2944fe74c6e84}{get\+Word} (\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} address)
+\begin{DoxyCompactList}\small\item\em uint32\+\_\+t \hyperlink{_monitor_8cpp_a1a065199e06d3498b0c2944fe74c6e84}{get\+Word(uint32\+\_\+t)} assembly routine returns the 32 bit word stored at the 32 bit address in the argument \end{DoxyCompactList}\item 
+void \hyperlink{_monitor_8cpp_af8110fd51598c1b11284d95c9dc7ee04}{show\+\_\+regs\+\_\+and\+\_\+mem} ()
+\begin{DoxyCompactList}\small\item\em prints registers r0-\/r15 to debug port, and shows the contents of 16 words worth of memory. The memory addresses cycle from 0x0 to 0x6000 \end{DoxyCompactList}\item 
+\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} \hyperlink{_monitor_8cpp_acc076242c3f305037bde6ed7a04af0ae}{hex2hex\+Int} (\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} hex)
+\item 
+void \hyperlink{_monitor_8cpp_acd5157b5f415f4ca9be9b2a23943440c}{set\+\_\+display\+\_\+mode} (void)
+\begin{DoxyCompactList}\small\item\em Function determines the correct display mode. \end{DoxyCompactList}\item 
+void \hyperlink{_monitor_8cpp_a29be7c30b6929c50ebb985b228fc1be2}{chk\+\_\+\+U\+A\+R\+T\+\_\+msg} (void)
+\begin{DoxyCompactList}\small\item\em checks for messages in serial port \end{DoxyCompactList}\item 
+void \hyperlink{_monitor_8cpp_a826db354ae1d910792a0330f8d4eb91a}{U\+A\+R\+T\+\_\+msg\+\_\+process} (void)
+\begin{DoxyCompactList}\small\item\em U\+A\+RT Input Message Processing. \end{DoxyCompactList}\item 
+void \hyperlink{_monitor_8cpp_a46319122045881fb6218e612b208393a}{status\+\_\+report} ()
+\begin{DoxyCompactList}\small\item\em output flow, temperature and velocity \end{DoxyCompactList}\item 
+void \hyperlink{_monitor_8cpp_a59a4a0c8721f73a8c9d9db5a4cdc6e88}{monitor} (void)
+\begin{DoxyCompactList}\small\item\em D\+E\+B\+UG and D\+I\+A\+G\+N\+O\+S\+T\+IC Mode U\+A\+RT Operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_monitor_8cpp_a6f40df2377324d78a306bbab41dbb90f}{green\+\_\+led\+\_\+status} = 1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+
+
+
+
+ -- E\+C\+EN 5803 Mastering Embedded Systems Architecture -- -- Project 1 Module 3 -- -- Microcontroller Firmware -- -- \hyperlink{_monitor_8cpp}{Monitor.\+cpp} -- \subsubsection*{-- -- }
+
+-- \subsubsection*{-- Designed for\+: University of Colorado at Boulder }
+
+-- -- Designed by\+: Tim Scherr \subsubsection*{-- Revised by\+: David James \& Ismail Yesildirek }
+
+-- Version\+: 2.\+0.\+1 -- Date of current revision\+: 2018-\/10-\/03 -- Target Microcontroller\+: Freescale M\+K\+L25\+Z\+V\+M\+T4 -- Tools used\+: A\+RM mbed compiler -- A\+RM mbed S\+DK -- Keil u\+Vision M\+DK v.\+5 \subsubsection*{-- Freescale F\+R\+D\+M-\/\+K\+L25Z Freedom Board }
+
+-- \subsubsection*{Functional Description\+: See below }
+
+\subsubsection*{-- Copyright (c) 2015 Tim Scherr All rights reserved. }
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_monitor_8cpp_a29be7c30b6929c50ebb985b228fc1be2}\label{_monitor_8cpp_a29be7c30b6929c50ebb985b228fc1be2}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!chk\+\_\+\+U\+A\+R\+T\+\_\+msg@{chk\+\_\+\+U\+A\+R\+T\+\_\+msg}}
+\index{chk\+\_\+\+U\+A\+R\+T\+\_\+msg@{chk\+\_\+\+U\+A\+R\+T\+\_\+msg}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{chk\+\_\+\+U\+A\+R\+T\+\_\+msg()}{chk\_UART\_msg()}}
+{\footnotesize\ttfamily void chk\+\_\+\+U\+A\+R\+T\+\_\+msg (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+checks for messages in serial port 
+
+\mbox{\Hypertarget{_monitor_8cpp_aed369562e3b59504cdb2bdc4915c70f8}\label{_monitor_8cpp_aed369562e3b59504cdb2bdc4915c70f8}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!get\+R0@{get\+R0}}
+\index{get\+R0@{get\+R0}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{get\+R0()}{getR0()}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} get\+R0 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+assembly routine which returns the unaltered contents of register r0 
+
+\mbox{\Hypertarget{_monitor_8cpp_a914c505285467a43a59d01e856e14dd2}\label{_monitor_8cpp_a914c505285467a43a59d01e856e14dd2}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!get\+Rn@{get\+Rn}}
+\index{get\+Rn@{get\+Rn}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Rn()}{getRn()}}
+{\footnotesize\ttfamily void get\+Rn (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}}]{reglist\mbox{[}16\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+assembly routine which fills a uint32\+\_\+t\mbox{[}16\mbox{]} array\textquotesingle{}s 1-\/15 elements with r1-\/r15 
+
+\mbox{\Hypertarget{_monitor_8cpp_a1a065199e06d3498b0c2944fe74c6e84}\label{_monitor_8cpp_a1a065199e06d3498b0c2944fe74c6e84}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!get\+Word@{get\+Word}}
+\index{get\+Word@{get\+Word}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Word()}{getWord()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+asm \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} get\+Word (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}}]{address }\end{DoxyParamCaption})}
+
+
+
+uint32\+\_\+t \hyperlink{_monitor_8cpp_a1a065199e06d3498b0c2944fe74c6e84}{get\+Word(uint32\+\_\+t)} assembly routine returns the 32 bit word stored at the 32 bit address in the argument 
+
+\mbox{\Hypertarget{_monitor_8cpp_aa5e13a31fefb89d68dd999f7badd48fb}\label{_monitor_8cpp_aa5e13a31fefb89d68dd999f7badd48fb}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!green\+L\+ED@{green\+L\+ED}}
+\index{green\+L\+ED@{green\+L\+ED}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{green\+L\+E\+D()}{greenLED()}}
+{\footnotesize\ttfamily Digital\+Out green\+L\+ED (\begin{DoxyParamCaption}\item[{L\+E\+D\+\_\+\+G\+R\+E\+EN}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_monitor_8cpp_acc076242c3f305037bde6ed7a04af0ae}\label{_monitor_8cpp_acc076242c3f305037bde6ed7a04af0ae}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!hex2hex\+Int@{hex2hex\+Int}}
+\index{hex2hex\+Int@{hex2hex\+Int}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{hex2hex\+Int()}{hex2hexInt()}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} hex2hex\+Int (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}}]{hex }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_monitor_8cpp_a59a4a0c8721f73a8c9d9db5a4cdc6e88}\label{_monitor_8cpp_a59a4a0c8721f73a8c9d9db5a4cdc6e88}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!monitor@{monitor}}
+\index{monitor@{monitor}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{monitor()}{monitor()}}
+{\footnotesize\ttfamily void monitor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+D\+E\+B\+UG and D\+I\+A\+G\+N\+O\+S\+T\+IC Mode U\+A\+RT Operation. 
+
+\mbox{\Hypertarget{_monitor_8cpp_acd5157b5f415f4ca9be9b2a23943440c}\label{_monitor_8cpp_acd5157b5f415f4ca9be9b2a23943440c}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!set\+\_\+display\+\_\+mode@{set\+\_\+display\+\_\+mode}}
+\index{set\+\_\+display\+\_\+mode@{set\+\_\+display\+\_\+mode}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{set\+\_\+display\+\_\+mode()}{set\_display\_mode()}}
+{\footnotesize\ttfamily void set\+\_\+display\+\_\+mode (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function determines the correct display mode. 
+
+register displays, sensor states, and calculated output
+
+There is deliberate delay in switching between modes to allow the R\+S-\/232 cable to be plugged into the header without causing problems.
+
+Set Display Mode Function The 3 display modes operate as follows\+:
+
+N\+O\+R\+M\+AL M\+O\+DE Outputs only mode and state information changes and calculated outputs
+
+Q\+U\+I\+ET M\+O\+DE No Outputs \mbox{\Hypertarget{_monitor_8cpp_af8110fd51598c1b11284d95c9dc7ee04}\label{_monitor_8cpp_af8110fd51598c1b11284d95c9dc7ee04}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!show\+\_\+regs\+\_\+and\+\_\+mem@{show\+\_\+regs\+\_\+and\+\_\+mem}}
+\index{show\+\_\+regs\+\_\+and\+\_\+mem@{show\+\_\+regs\+\_\+and\+\_\+mem}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{show\+\_\+regs\+\_\+and\+\_\+mem()}{show\_regs\_and\_mem()}}
+{\footnotesize\ttfamily void show\+\_\+regs\+\_\+and\+\_\+mem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prints registers r0-\/r15 to debug port, and shows the contents of 16 words worth of memory. The memory addresses cycle from 0x0 to 0x6000 
+
+\mbox{\Hypertarget{_monitor_8cpp_a46319122045881fb6218e612b208393a}\label{_monitor_8cpp_a46319122045881fb6218e612b208393a}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!status\+\_\+report@{status\+\_\+report}}
+\index{status\+\_\+report@{status\+\_\+report}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{status\+\_\+report()}{status\_report()}}
+{\footnotesize\ttfamily void status\+\_\+report (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+output flow, temperature and velocity 
+
+\mbox{\Hypertarget{_monitor_8cpp_a826db354ae1d910792a0330f8d4eb91a}\label{_monitor_8cpp_a826db354ae1d910792a0330f8d4eb91a}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!U\+A\+R\+T\+\_\+msg\+\_\+process@{U\+A\+R\+T\+\_\+msg\+\_\+process}}
+\index{U\+A\+R\+T\+\_\+msg\+\_\+process@{U\+A\+R\+T\+\_\+msg\+\_\+process}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+msg\+\_\+process()}{UART\_msg\_process()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+msg\+\_\+process (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+U\+A\+RT Input Message Processing. 
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_monitor_8cpp_a6f40df2377324d78a306bbab41dbb90f}\label{_monitor_8cpp_a6f40df2377324d78a306bbab41dbb90f}} 
+\index{Monitor.\+cpp@{Monitor.\+cpp}!green\+\_\+led\+\_\+status@{green\+\_\+led\+\_\+status}}
+\index{green\+\_\+led\+\_\+status@{green\+\_\+led\+\_\+status}!Monitor.\+cpp@{Monitor.\+cpp}}
+\subsubsection{\texorpdfstring{green\+\_\+led\+\_\+status}{green\_led\_status}}
+{\footnotesize\ttfamily bool green\+\_\+led\+\_\+status = 1}
+

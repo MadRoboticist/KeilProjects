@@ -1,0 +1,270 @@
+\hypertarget{_u_a_r_t__poll_8cpp}{}\section{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M3\+\_\+\+Keil/\+U\+A\+R\+T\+\_\+poll.cpp File Reference}
+\label{_u_a_r_t__poll_8cpp}\index{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M3\+\_\+\+Keil/\+U\+A\+R\+T\+\_\+poll.\+cpp@{C\+:/\+Users/\+David James/\+Documents/\+Keil\+Projects/\+M\+E\+S\+A/\+Project 1/\+M3\+\_\+\+Keil/\+U\+A\+R\+T\+\_\+poll.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}shared.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}M\+K\+L25\+Z4.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_u_a_r_t__poll_8cpp_a1c5cc33333d85d8206bf1660e3a85dea}{O\+E\+RR}~(U\+A\+R\+T0-\/$>$S1 \& U\+A\+R\+T\+L\+P\+\_\+\+S1\+\_\+\+O\+R\+\_\+\+M\+A\+SK)
+\item 
+\#define \hyperlink{_u_a_r_t__poll_8cpp_a7258e04e4aa884e29a879eb2207c54a5}{C\+R\+EN}~(U\+A\+R\+T0-\/$>$C2 \& U\+A\+R\+T\+L\+P\+\_\+\+C2\+\_\+\+R\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define \hyperlink{_u_a_r_t__poll_8cpp_a5e2cd83f448b671ef038ac9e3b455bee}{R\+C\+R\+EG}~U\+A\+R\+T0-\/$>$D
+\item 
+\#define \hyperlink{_u_a_r_t__poll_8cpp_aafe1f6745f2c0a01f867c686bd69e5c7}{F\+E\+RR}~(U\+A\+R\+T0-\/$>$S1 \& U\+A\+R\+T\+L\+P\+\_\+\+S1\+\_\+\+F\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define \hyperlink{_u_a_r_t__poll_8cpp_af3b639b9a4714f95fa0b25629240906b}{R\+C\+IF}~(U\+A\+R\+T0-\/$>$S1 \& U\+A\+R\+T\+L\+P\+\_\+\+S1\+\_\+\+R\+D\+R\+F\+\_\+\+M\+A\+SK)
+\item 
+\#define \hyperlink{_u_a_r_t__poll_8cpp_ac765fb3c77a3c11ddd4e7ac9ea7b4bed}{T\+X\+IF}~(U\+A\+R\+T0-\/$>$S1 \& U\+A\+R\+T\+L\+P\+\_\+\+S1\+\_\+\+T\+D\+R\+E\+\_\+\+M\+A\+SK)
+\item 
+\#define \hyperlink{_u_a_r_t__poll_8cpp_ae52810cc198abb3279a1f966cb6b51ea}{T\+X\+R\+EG}~U\+A\+R\+T0-\/$>$D
+\item 
+\#define \hyperlink{_u_a_r_t__poll_8cpp_aa059e0488a9d17fab4152d2844c1aedd}{T\+R\+MT}~(U\+A\+R\+T0-\/$>$S1 \& U\+A\+R\+T\+L\+P\+\_\+\+S1\+\_\+\+T\+C\+\_\+\+M\+A\+SK)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_u_a_r_t__poll_8cpp_a44becc30285e88213a624428b2b46cdf}{serial} (void)
+\begin{DoxyCompactList}\small\item\em function polls the serial port for Rx or Tx data \end{DoxyCompactList}\item 
+void \hyperlink{_u_a_r_t__poll_8cpp_ad56b6abae77fe4b4bea9a839bb47d232}{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put puts a null terminated string directly (no ram buffer) to the U\+A\+RT in A\+S\+C\+II format. \end{DoxyCompactList}\item 
+void \hyperlink{_u_a_r_t__poll_8cpp_ab9295f314fea2e01d023dc5a0c39f555}{U\+A\+R\+T\+\_\+direct\+\_\+put} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} chr)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put puts a character directly (no ram buffer) to the U\+A\+RT in A\+S\+C\+II format. \end{DoxyCompactList}\item 
+void \hyperlink{_u_a_r_t__poll_8cpp_adf7d84d83418afe25297949ce89a7586}{U\+A\+R\+T\+\_\+put} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} c)
+\begin{DoxyCompactList}\small\item\em Puts a byte into the transmit buffer. \end{DoxyCompactList}\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{_u_a_r_t__poll_8cpp_a6659a2fc6c6bccd0206e0d12798cc4b6}{U\+A\+R\+T\+\_\+get} (void)
+\begin{DoxyCompactList}\small\item\em Gets the next byte available in the RX buffer. \end{DoxyCompactList}\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{_u_a_r_t__poll_8cpp_af92515bd65cb7df035cfe5b38c4faf40}{U\+A\+R\+T\+\_\+input} (void)
+\begin{DoxyCompactList}\small\item\em Checks if characters are sitting in the U\+A\+RT input buffer. \end{DoxyCompactList}\item 
+void \hyperlink{_u_a_r_t__poll_8cpp_ac6ed065c7d51693d1fbf390c19a7fa4b}{U\+A\+R\+T\+\_\+msg\+\_\+put} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+msg\+\_\+put puts a null terminated string through the transmit buffer to the U\+A\+RT port in A\+S\+C\+II format. \end{DoxyCompactList}\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{_u_a_r_t__poll_8cpp_a4456109db514cdc9933618f2aa6f1897}{hex\+\_\+to\+\_\+asc} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} c)
+\begin{DoxyCompactList}\small\item\em H\+E\+X\+\_\+\+T\+O\+\_\+\+A\+S\+C\+II Function Function takes a single hex character (0 thru Fh) and converts to A\+S\+C\+II. \end{DoxyCompactList}\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{_u_a_r_t__poll_8cpp_a44037baadfde4ca1ce659ed1d877a52f}{asc\+\_\+to\+\_\+hex} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} c)
+\begin{DoxyCompactList}\small\item\em Takes a single A\+S\+C\+II character and converts to hex. \end{DoxyCompactList}\item 
+void \hyperlink{_u_a_r_t__poll_8cpp_ac223c18ba29bce15057b35cc06a5da77}{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put} (\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} c)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+put puts the low nibble of a byte in hex directly (no ram buffer) to the U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{_u_a_r_t__poll_8cpp_a250ea5455b397ab492794e657d8c5bc8}{U\+A\+R\+T\+\_\+hex\+\_\+put} (unsigned char c)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put puts the high nibble of a byte in h U\+A\+RT port. (currently commented out) \end{DoxyCompactList}\item 
+void \hyperlink{_u_a_r_t__poll_8cpp_aed4756aead0f5bdb87fb09e7ed2f6b91}{U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put} (unsigned char c)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put puts 1 byte in hex directly (no ram buffer) to the U\+A\+RT. \end{DoxyCompactList}\item 
+void \hyperlink{_u_a_r_t__poll_8cpp_ac6316f9c9bc00741ac68cdf505ed13bf}{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put} (\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t} word)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put puts 4 bytes in hex directly (no ram buffer) to the U\+A\+RT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} \hyperlink{_u_a_r_t__poll_8cpp_a95430821dc4b95866bfec06c925ce4f0}{error\+\_\+count} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+
+
+
+
+ -- E\+C\+EN 5803 Mastering Embedded System Architecture -- -- Project 1 Module 3 -- -- Microcontroller Firmware -- -- U\+A\+R\+T\+\_\+poll.\+c -- \subsubsection*{-- -- }
+
+-- \subsubsection*{-- Designed for\+: University of Colorado at Boulder }
+
+-- -- Designed by\+: Tim Scherr \subsubsection*{-- Revised by\+: David James \& Ismail Yesildirek }
+
+-- Version\+: 2.\+0.\+1 -- Date of current revision\+: 2018-\/10-\/03 -- Target Microcontroller\+: Freescale M\+K\+L25\+Z\+V\+M\+T4 -- Tools used\+: A\+RM mbed compiler -- A\+RM mbed S\+DK -- Keil u\+Vision M\+DK v.\+5 \subsubsection*{-- Freescale F\+R\+D\+M-\/\+K\+L25Z Freedom Board }
+
+-- -- Functional Description\+: This file contains routines that support messages -- to and from the U\+A\+RT port. Included are\+: -- Serial() -\/ a routine to send/receive bytes on the U\+A\+RT port to -- the transmit/receive buffers -- \hyperlink{_u_a_r_t__poll_8cpp_adf7d84d83418afe25297949ce89a7586}{U\+A\+R\+T\+\_\+put()} -\/ a routine that puts a character in the transmit buffer -- \hyperlink{_u_a_r_t__poll_8cpp_a6659a2fc6c6bccd0206e0d12798cc4b6}{U\+A\+R\+T\+\_\+get()} -\/ a routine that gets the next character from the receive -- buffer -- \hyperlink{_u_a_r_t__poll_8cpp_ac6ed065c7d51693d1fbf390c19a7fa4b}{U\+A\+R\+T\+\_\+msg\+\_\+put()} -\/ a routine that puts a string in the transmit buffer -- \hyperlink{_u_a_r_t__poll_8cpp_ad56b6abae77fe4b4bea9a839bb47d232}{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put()} -\/ routine that sends a string out the U\+A\+RT port -- \hyperlink{_u_a_r_t__poll_8cpp_af92515bd65cb7df035cfe5b38c4faf40}{U\+A\+R\+T\+\_\+input()} -\/ determines if a character has been received -- \hyperlink{_u_a_r_t__poll_8cpp_a250ea5455b397ab492794e657d8c5bc8}{U\+A\+R\+T\+\_\+hex\+\_\+put()} -\/ a routine that puts a hex byte in the transmit buffer \subsubsection*{-- U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put -\/ a routine that puts a hex byte directly to the U\+A\+RT port }
+
+-- N\+EW TO V\+E\+R\+S\+I\+ON 2.\+0.\+1\+: -- \hyperlink{_u_a_r_t__poll_8cpp_ac223c18ba29bce15057b35cc06a5da77}{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put()} -\/ puts the low nibble of a byte in hex directly -- (no ram buffer) to the U\+A\+RT. -- \hyperlink{_u_a_r_t__poll_8cpp_ac6316f9c9bc00741ac68cdf505ed13bf}{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put()} -\/ puts a word in hex directly to the U\+A\+RT \subsubsection*{-- Copyright (c) 2015 Tim Scherr All rights reserved. }
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_a7258e04e4aa884e29a879eb2207c54a5}\label{_u_a_r_t__poll_8cpp_a7258e04e4aa884e29a879eb2207c54a5}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!C\+R\+EN@{C\+R\+EN}}
+\index{C\+R\+EN@{C\+R\+EN}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{C\+R\+EN}{CREN}}
+{\footnotesize\ttfamily \#define C\+R\+EN~(U\+A\+R\+T0-\/$>$C2 \& U\+A\+R\+T\+L\+P\+\_\+\+C2\+\_\+\+R\+E\+\_\+\+M\+A\+SK)}
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_aafe1f6745f2c0a01f867c686bd69e5c7}\label{_u_a_r_t__poll_8cpp_aafe1f6745f2c0a01f867c686bd69e5c7}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!F\+E\+RR@{F\+E\+RR}}
+\index{F\+E\+RR@{F\+E\+RR}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{F\+E\+RR}{FERR}}
+{\footnotesize\ttfamily \#define F\+E\+RR~(U\+A\+R\+T0-\/$>$S1 \& U\+A\+R\+T\+L\+P\+\_\+\+S1\+\_\+\+F\+E\+\_\+\+M\+A\+SK)}
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_a1c5cc33333d85d8206bf1660e3a85dea}\label{_u_a_r_t__poll_8cpp_a1c5cc33333d85d8206bf1660e3a85dea}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!O\+E\+RR@{O\+E\+RR}}
+\index{O\+E\+RR@{O\+E\+RR}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{O\+E\+RR}{OERR}}
+{\footnotesize\ttfamily \#define O\+E\+RR~(U\+A\+R\+T0-\/$>$S1 \& U\+A\+R\+T\+L\+P\+\_\+\+S1\+\_\+\+O\+R\+\_\+\+M\+A\+SK)}
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_af3b639b9a4714f95fa0b25629240906b}\label{_u_a_r_t__poll_8cpp_af3b639b9a4714f95fa0b25629240906b}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!R\+C\+IF@{R\+C\+IF}}
+\index{R\+C\+IF@{R\+C\+IF}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{R\+C\+IF}{RCIF}}
+{\footnotesize\ttfamily \#define R\+C\+IF~(U\+A\+R\+T0-\/$>$S1 \& U\+A\+R\+T\+L\+P\+\_\+\+S1\+\_\+\+R\+D\+R\+F\+\_\+\+M\+A\+SK)}
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_a5e2cd83f448b671ef038ac9e3b455bee}\label{_u_a_r_t__poll_8cpp_a5e2cd83f448b671ef038ac9e3b455bee}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!R\+C\+R\+EG@{R\+C\+R\+EG}}
+\index{R\+C\+R\+EG@{R\+C\+R\+EG}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{R\+C\+R\+EG}{RCREG}}
+{\footnotesize\ttfamily \#define R\+C\+R\+EG~U\+A\+R\+T0-\/$>$D}
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_aa059e0488a9d17fab4152d2844c1aedd}\label{_u_a_r_t__poll_8cpp_aa059e0488a9d17fab4152d2844c1aedd}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!T\+R\+MT@{T\+R\+MT}}
+\index{T\+R\+MT@{T\+R\+MT}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{T\+R\+MT}{TRMT}}
+{\footnotesize\ttfamily \#define T\+R\+MT~(U\+A\+R\+T0-\/$>$S1 \& U\+A\+R\+T\+L\+P\+\_\+\+S1\+\_\+\+T\+C\+\_\+\+M\+A\+SK)}
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_ac765fb3c77a3c11ddd4e7ac9ea7b4bed}\label{_u_a_r_t__poll_8cpp_ac765fb3c77a3c11ddd4e7ac9ea7b4bed}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!T\+X\+IF@{T\+X\+IF}}
+\index{T\+X\+IF@{T\+X\+IF}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{T\+X\+IF}{TXIF}}
+{\footnotesize\ttfamily \#define T\+X\+IF~(U\+A\+R\+T0-\/$>$S1 \& U\+A\+R\+T\+L\+P\+\_\+\+S1\+\_\+\+T\+D\+R\+E\+\_\+\+M\+A\+SK)}
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_ae52810cc198abb3279a1f966cb6b51ea}\label{_u_a_r_t__poll_8cpp_ae52810cc198abb3279a1f966cb6b51ea}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!T\+X\+R\+EG@{T\+X\+R\+EG}}
+\index{T\+X\+R\+EG@{T\+X\+R\+EG}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{T\+X\+R\+EG}{TXREG}}
+{\footnotesize\ttfamily \#define T\+X\+R\+EG~U\+A\+R\+T0-\/$>$D}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_a44037baadfde4ca1ce659ed1d877a52f}\label{_u_a_r_t__poll_8cpp_a44037baadfde4ca1ce659ed1d877a52f}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!asc\+\_\+to\+\_\+hex@{asc\+\_\+to\+\_\+hex}}
+\index{asc\+\_\+to\+\_\+hex@{asc\+\_\+to\+\_\+hex}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{asc\+\_\+to\+\_\+hex()}{asc\_to\_hex()}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} asc\+\_\+to\+\_\+hex (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{c }\end{DoxyParamCaption})}
+
+
+
+Takes a single A\+S\+C\+II character and converts to hex. 
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_a4456109db514cdc9933618f2aa6f1897}\label{_u_a_r_t__poll_8cpp_a4456109db514cdc9933618f2aa6f1897}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!hex\+\_\+to\+\_\+asc@{hex\+\_\+to\+\_\+asc}}
+\index{hex\+\_\+to\+\_\+asc@{hex\+\_\+to\+\_\+asc}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{hex\+\_\+to\+\_\+asc()}{hex\_to\_asc()}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} hex\+\_\+to\+\_\+asc (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{c }\end{DoxyParamCaption})}
+
+
+
+H\+E\+X\+\_\+\+T\+O\+\_\+\+A\+S\+C\+II Function Function takes a single hex character (0 thru Fh) and converts to A\+S\+C\+II. 
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_a44becc30285e88213a624428b2b46cdf}\label{_u_a_r_t__poll_8cpp_a44becc30285e88213a624428b2b46cdf}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!serial@{serial}}
+\index{serial@{serial}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{serial()}{serial()}}
+{\footnotesize\ttfamily void serial (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+function polls the serial port for Rx or Tx data 
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_aed4756aead0f5bdb87fb09e7ed2f6b91}\label{_u_a_r_t__poll_8cpp_aed4756aead0f5bdb87fb09e7ed2f6b91}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put()}{UART\_direct\_hex\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put (\begin{DoxyParamCaption}\item[{unsigned char}]{c }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put puts 1 byte in hex directly (no ram buffer) to the U\+A\+RT. 
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_ad56b6abae77fe4b4bea9a839bb47d232}\label{_u_a_r_t__poll_8cpp_ad56b6abae77fe4b4bea9a839bb47d232}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put()}{UART\_direct\_msg\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put puts a null terminated string directly (no ram buffer) to the U\+A\+RT in A\+S\+C\+II format. 
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_ab9295f314fea2e01d023dc5a0c39f555}\label{_u_a_r_t__poll_8cpp_ab9295f314fea2e01d023dc5a0c39f555}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!U\+A\+R\+T\+\_\+direct\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+direct\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+put}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+direct\+\_\+put()}{UART\_direct\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+direct\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{chr }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+direct\+\_\+msg\+\_\+put puts a character directly (no ram buffer) to the U\+A\+RT in A\+S\+C\+II format. 
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_ac6316f9c9bc00741ac68cdf505ed13bf}\label{_u_a_r_t__poll_8cpp_ac6316f9c9bc00741ac68cdf505ed13bf}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put()}{UART\_direct\_word\_hex\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+direct\+\_\+word\+\_\+hex\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a435d1572bf3f880d55459d9805097f62}{uint32\+\_\+t}}]{word }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+direct\+\_\+hex\+\_\+put puts 4 bytes in hex directly (no ram buffer) to the U\+A\+RT. 
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_a6659a2fc6c6bccd0206e0d12798cc4b6}\label{_u_a_r_t__poll_8cpp_a6659a2fc6c6bccd0206e0d12798cc4b6}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!U\+A\+R\+T\+\_\+get@{U\+A\+R\+T\+\_\+get}}
+\index{U\+A\+R\+T\+\_\+get@{U\+A\+R\+T\+\_\+get}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+get()}{UART\_get()}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} U\+A\+R\+T\+\_\+get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the next byte available in the RX buffer. 
+
+U\+A\+R\+T\+\_\+get gets the next byte if one is available from the receive buffer at the location pointed to by rx\+\_\+out\+\_\+idx. The pointer is circularly incremented and the byte is returned in R7. Should no byte be available the function will wait until one is available. There is no need to disable the serial interrupt which modifies rx\+\_\+in\+\_\+idx since the function is looking for a \mbox{\Hypertarget{_u_a_r_t__poll_8cpp_a250ea5455b397ab492794e657d8c5bc8}\label{_u_a_r_t__poll_8cpp_a250ea5455b397ab492794e657d8c5bc8}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!U\+A\+R\+T\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+hex\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+hex\+\_\+put@{U\+A\+R\+T\+\_\+hex\+\_\+put}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+hex\+\_\+put()}{UART\_hex\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+hex\+\_\+put (\begin{DoxyParamCaption}\item[{unsigned char}]{c }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+high\+\_\+nibble\+\_\+put puts the high nibble of a byte in h U\+A\+RT port. (currently commented out) 
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_af92515bd65cb7df035cfe5b38c4faf40}\label{_u_a_r_t__poll_8cpp_af92515bd65cb7df035cfe5b38c4faf40}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!U\+A\+R\+T\+\_\+input@{U\+A\+R\+T\+\_\+input}}
+\index{U\+A\+R\+T\+\_\+input@{U\+A\+R\+T\+\_\+input}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+input()}{UART\_input()}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} U\+A\+R\+T\+\_\+input (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks if characters are sitting in the U\+A\+RT input buffer. 
+
+U\+A\+R\+T\+\_\+input returns a 1 if 1 or more receive byte(s) is(are) available and a 0 if the receive buffer rx\+\_\+buf is empty. There is no need to disable the serial interrupt which modifies rx\+\_\+in\+\_\+idx since function is looking for a compare only between rx\+\_\+in\+\_\+idx \& rx\+\_\+out\+\_\+idx. \mbox{\Hypertarget{_u_a_r_t__poll_8cpp_ac223c18ba29bce15057b35cc06a5da77}\label{_u_a_r_t__poll_8cpp_ac223c18ba29bce15057b35cc06a5da77}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put@{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put@{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put()}{UART\_low\_nibble\_direct\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+direct\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{c }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+low\+\_\+nibble\+\_\+put puts the low nibble of a byte in hex directly (no ram buffer) to the U\+A\+RT. 
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_ac6ed065c7d51693d1fbf390c19a7fa4b}\label{_u_a_r_t__poll_8cpp_ac6ed065c7d51693d1fbf390c19a7fa4b}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!U\+A\+R\+T\+\_\+msg\+\_\+put@{U\+A\+R\+T\+\_\+msg\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+msg\+\_\+put@{U\+A\+R\+T\+\_\+msg\+\_\+put}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+msg\+\_\+put()}{UART\_msg\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+msg\+\_\+put (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})}
+
+
+
+U\+A\+R\+T\+\_\+msg\+\_\+put puts a null terminated string through the transmit buffer to the U\+A\+RT port in A\+S\+C\+II format. 
+
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_adf7d84d83418afe25297949ce89a7586}\label{_u_a_r_t__poll_8cpp_adf7d84d83418afe25297949ce89a7586}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!U\+A\+R\+T\+\_\+put@{U\+A\+R\+T\+\_\+put}}
+\index{U\+A\+R\+T\+\_\+put@{U\+A\+R\+T\+\_\+put}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{U\+A\+R\+T\+\_\+put()}{UART\_put()}}
+{\footnotesize\ttfamily void U\+A\+R\+T\+\_\+put (\begin{DoxyParamCaption}\item[{\hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}]{c }\end{DoxyParamCaption})}
+
+
+
+Puts a byte into the transmit buffer. 
+
+Puts a byte, to the transmit buffer at the location pointed to by tx\+\_\+in\+\_\+idx. The pointer is incremented circularly as described previously. If the transmit buffer should wrap around (should be designed not to happen), data will be lost. The serial interrupt must be temporarily disabled since it reads tx\+\_\+in\+\_\+idx and this routine updates tx\+\_\+in\+\_\+idx which is a 16 bit value. 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_u_a_r_t__poll_8cpp_a95430821dc4b95866bfec06c925ce4f0}\label{_u_a_r_t__poll_8cpp_a95430821dc4b95866bfec06c925ce4f0}} 
+\index{U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}!error\+\_\+count@{error\+\_\+count}}
+\index{error\+\_\+count@{error\+\_\+count}!U\+A\+R\+T\+\_\+poll.\+cpp@{U\+A\+R\+T\+\_\+poll.\+cpp}}
+\subsubsection{\texorpdfstring{error\+\_\+count}{error\_count}}
+{\footnotesize\ttfamily \hyperlink{shared_8h_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR} error\+\_\+count = 0}
+

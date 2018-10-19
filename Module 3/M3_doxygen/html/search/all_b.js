@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['no',['NO',['../shared_8h.html#a996bde01ecac342918f0a2c4e7ce7bd5',1,'shared.h']]],
+  ['normal',['NORMAL',['../shared_8h.html#ad8667bac763ba2aa5d7c29541fecf0a6a50d1448013c6f17125caee18aa418af7',1,'shared.h']]]
+];

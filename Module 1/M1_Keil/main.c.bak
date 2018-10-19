@@ -1,0 +1,78 @@
+/************************************************************************//**
+* \file main.c
+* \brief LAB EXERCISE 5.2 - SQUARE ROOT APPROXIMATION
+*
+* Write an assembly code subroutine to approximate the square root of an 
+* argument using the bisection method. All math is done with integers, so the 
+* resulting square root will also be an integer
+******************************************************************************
+* GOOD LUCK!
+ ****************************************************************************/
+
+ #include "stdint.h"
+ #include <MKL25Z4.H>
+ 
+ /** @cond DO_NOT_INCLUDE_WITH_DOXYGEN */
+ #include "string.h"
+ /** @endcond */
+ 
+ /**
+ * @brief 5863 Write a brief description of the function here
+ *
+ * Detailed description of the function after one line gap
+ *
+ * @note You can also add a note this way
+ *
+ * @param[in] 
+ *  You can also start writing on a new line. 
+ *  And continue on the next line. This is how you describe an input parameter
+ *
+ * @return
+ *  This is how you describe the return value
+ * 
+ */
+__asm int my_sqrt(int x)
+{
+	MOV		r3,r0				; x is now r3, r0 will be the return value c
+	MOVS	r2,#1			 	; b is r2 initialized to 65536, the largest sqrt possible for 32 bits
+	LSLS  r2,#16			; 65536 is 1 << 16 since the compiler wont allow more than 8 bit immediates.
+	MOVS	r1,#0				; a is r1, initialized to 0
+loop								; loop starts here
+	MOV		r4,r0				; c_old <- c
+	ADDS	r0,r1,r2		; c <- (a+b)
+	LSRS	r0,r0,#1		; c <- c/2
+	MOV  	r5,r0		  	; r5 <- c*c
+	MULS  r5,r5
+	CMP		r5,r3				; check c*c == x
+	BEQ		end					; exit if it is the solution
+	BLT		less				; branch to less if c*c < x
+	MOV		r2,r0				; if c*c > x, b <- c
+ret
+	CMP		r0,r4				; check c == c_old
+	BNE		loop				; return to loop if c has changed
+end	
+	BX		lr					; finished
+less								; 
+	MOV		r1,r0				; a <- c
+	B			ret					; return
+}
+
+/*----------------------------------------------------------------------------
+ MAIN function
+ *----------------------------------------------------------------------------*/
+ /**
+ * @brief Main function
+ *
+ * Detailed description of the main
+ */
+int main(void){
+	volatile int r, j, k, l=0;                 
+  r = my_sqrt(2);     // should be 1
+  j = my_sqrt(4);     // should be 2
+	k = my_sqrt(22); 	  // should be 5
+	l = my_sqrt(121);   // should be 11
+	while(1)
+		;
+}
+
+// *******************************ARM University Program Copyright © ARM Ltd 2014*************************************/
